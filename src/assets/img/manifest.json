@@ -1,0 +1,752 @@
+{
+  "hero": {
+    "src": "photos/stock/interior.jpg",
+    "hash": "b660a6f108",
+    "width": 1800,
+    "height": 1800,
+    "color": "#c8b8a8",
+    "files": {
+      "avif": [
+        [
+          480,
+          "hero-480.b660a6f108.avif"
+        ],
+        [
+          800,
+          "hero-800.b660a6f108.avif"
+        ],
+        [
+          1200,
+          "hero-1200.b660a6f108.avif"
+        ],
+        [
+          1600,
+          "hero-1600.b660a6f108.avif"
+        ],
+        [
+          1800,
+          "hero-1800.b660a6f108.avif"
+        ]
+      ],
+      "webp": [
+        [
+          480,
+          "hero-480.b660a6f108.webp"
+        ],
+        [
+          800,
+          "hero-800.b660a6f108.webp"
+        ],
+        [
+          1200,
+          "hero-1200.b660a6f108.webp"
+        ],
+        [
+          1600,
+          "hero-1600.b660a6f108.webp"
+        ],
+        [
+          1800,
+          "hero-1800.b660a6f108.webp"
+        ]
+      ],
+      "jpg": [
+        [
+          480,
+          "hero-480.b660a6f108.jpg"
+        ],
+        [
+          800,
+          "hero-800.b660a6f108.jpg"
+        ],
+        [
+          1200,
+          "hero-1200.b660a6f108.jpg"
+        ],
+        [
+          1600,
+          "hero-1600.b660a6f108.jpg"
+        ],
+        [
+          1800,
+          "hero-1800.b660a6f108.jpg"
+        ]
+      ]
+    }
+  },
+  "lake": {
+    "src": "photos/stock/lake.jpg",
+    "hash": "38e69a50b2",
+    "width": 1800,
+    "height": 1200,
+    "color": "#080808",
+    "files": {
+      "avif": [
+        [
+          480,
+          "lake-480.38e69a50b2.avif"
+        ],
+        [
+          800,
+          "lake-800.38e69a50b2.avif"
+        ],
+        [
+          1200,
+          "lake-1200.38e69a50b2.avif"
+        ],
+        [
+          1600,
+          "lake-1600.38e69a50b2.avif"
+        ],
+        [
+          1800,
+          "lake-1800.38e69a50b2.avif"
+        ]
+      ],
+      "webp": [
+        [
+          480,
+          "lake-480.38e69a50b2.webp"
+        ],
+        [
+          800,
+          "lake-800.38e69a50b2.webp"
+        ],
+        [
+          1200,
+          "lake-1200.38e69a50b2.webp"
+        ],
+        [
+          1600,
+          "lake-1600.38e69a50b2.webp"
+        ],
+        [
+          1800,
+          "lake-1800.38e69a50b2.webp"
+        ]
+      ],
+      "jpg": [
+        [
+          480,
+          "lake-480.38e69a50b2.jpg"
+        ],
+        [
+          800,
+          "lake-800.38e69a50b2.jpg"
+        ],
+        [
+          1200,
+          "lake-1200.38e69a50b2.jpg"
+        ],
+        [
+          1600,
+          "lake-1600.38e69a50b2.jpg"
+        ],
+        [
+          1800,
+          "lake-1800.38e69a50b2.jpg"
+        ]
+      ]
+    }
+  },
+  "alpine-balcony": {
+    "src": "photos/placeholders/alpine-balcony.svg",
+    "hash": "f5cab80147",
+    "width": 2000,
+    "height": 1333,
+    "color": "#c8d8d8",
+    "files": {
+      "avif": [
+        [
+          480,
+          "alpine-balcony-480.f5cab80147.avif"
+        ],
+        [
+          800,
+          "alpine-balcony-800.f5cab80147.avif"
+        ],
+        [
+          1200,
+          "alpine-balcony-1200.f5cab80147.avif"
+        ],
+        [
+          1600,
+          "alpine-balcony-1600.f5cab80147.avif"
+        ],
+        [
+          2000,
+          "alpine-balcony-2000.f5cab80147.avif"
+        ]
+      ],
+      "webp": [
+        [
+          480,
+          "alpine-balcony-480.f5cab80147.webp"
+        ],
+        [
+          800,
+          "alpine-balcony-800.f5cab80147.webp"
+        ],
+        [
+          1200,
+          "alpine-balcony-1200.f5cab80147.webp"
+        ],
+        [
+          1600,
+          "alpine-balcony-1600.f5cab80147.webp"
+        ],
+        [
+          2000,
+          "alpine-balcony-2000.f5cab80147.webp"
+        ]
+      ],
+      "jpg": [
+        [
+          480,
+          "alpine-balcony-480.f5cab80147.jpg"
+        ],
+        [
+          800,
+          "alpine-balcony-800.f5cab80147.jpg"
+        ],
+        [
+          1200,
+          "alpine-balcony-1200.f5cab80147.jpg"
+        ],
+        [
+          1600,
+          "alpine-balcony-1600.f5cab80147.jpg"
+        ],
+        [
+          2000,
+          "alpine-balcony-2000.f5cab80147.jpg"
+        ]
+      ]
+    }
+  },
+  "alpine-bedroom": {
+    "src": "photos/placeholders/alpine-bedroom.svg",
+    "hash": "da595268a0",
+    "width": 2000,
+    "height": 1333,
+    "color": "#e8e8d8",
+    "files": {
+      "avif": [
+        [
+          480,
+          "alpine-bedroom-480.da595268a0.avif"
+        ],
+        [
+          800,
+          "alpine-bedroom-800.da595268a0.avif"
+        ],
+        [
+          1200,
+          "alpine-bedroom-1200.da595268a0.avif"
+        ],
+        [
+          1600,
+          "alpine-bedroom-1600.da595268a0.avif"
+        ],
+        [
+          2000,
+          "alpine-bedroom-2000.da595268a0.avif"
+        ]
+      ],
+      "webp": [
+        [
+          480,
+          "alpine-bedroom-480.da595268a0.webp"
+        ],
+        [
+          800,
+          "alpine-bedroom-800.da595268a0.webp"
+        ],
+        [
+          1200,
+          "alpine-bedroom-1200.da595268a0.webp"
+        ],
+        [
+          1600,
+          "alpine-bedroom-1600.da595268a0.webp"
+        ],
+        [
+          2000,
+          "alpine-bedroom-2000.da595268a0.webp"
+        ]
+      ],
+      "jpg": [
+        [
+          480,
+          "alpine-bedroom-480.da595268a0.jpg"
+        ],
+        [
+          800,
+          "alpine-bedroom-800.da595268a0.jpg"
+        ],
+        [
+          1200,
+          "alpine-bedroom-1200.da595268a0.jpg"
+        ],
+        [
+          1600,
+          "alpine-bedroom-1600.da595268a0.jpg"
+        ],
+        [
+          2000,
+          "alpine-bedroom-2000.da595268a0.jpg"
+        ]
+      ]
+    }
+  },
+  "soca-river": {
+    "src": "photos/placeholders/soca-river.svg",
+    "hash": "7bcbff68c9",
+    "width": 2000,
+    "height": 1333,
+    "color": "#b8d8d8",
+    "files": {
+      "avif": [
+        [
+          480,
+          "soca-river-480.7bcbff68c9.avif"
+        ],
+        [
+          800,
+          "soca-river-800.7bcbff68c9.avif"
+        ],
+        [
+          1200,
+          "soca-river-1200.7bcbff68c9.avif"
+        ],
+        [
+          1600,
+          "soca-river-1600.7bcbff68c9.avif"
+        ],
+        [
+          2000,
+          "soca-river-2000.7bcbff68c9.avif"
+        ]
+      ],
+      "webp": [
+        [
+          480,
+          "soca-river-480.7bcbff68c9.webp"
+        ],
+        [
+          800,
+          "soca-river-800.7bcbff68c9.webp"
+        ],
+        [
+          1200,
+          "soca-river-1200.7bcbff68c9.webp"
+        ],
+        [
+          1600,
+          "soca-river-1600.7bcbff68c9.webp"
+        ],
+        [
+          2000,
+          "soca-river-2000.7bcbff68c9.webp"
+        ]
+      ],
+      "jpg": [
+        [
+          480,
+          "soca-river-480.7bcbff68c9.jpg"
+        ],
+        [
+          800,
+          "soca-river-800.7bcbff68c9.jpg"
+        ],
+        [
+          1200,
+          "soca-river-1200.7bcbff68c9.jpg"
+        ],
+        [
+          1600,
+          "soca-river-1600.7bcbff68c9.jpg"
+        ],
+        [
+          2000,
+          "soca-river-2000.7bcbff68c9.jpg"
+        ]
+      ]
+    }
+  },
+  "stone-house": {
+    "src": "photos/placeholders/stone-house.svg",
+    "hash": "f6323ea60b",
+    "width": 2000,
+    "height": 1333,
+    "color": "#c8d8d8",
+    "files": {
+      "avif": [
+        [
+          480,
+          "stone-house-480.f6323ea60b.avif"
+        ],
+        [
+          800,
+          "stone-house-800.f6323ea60b.avif"
+        ],
+        [
+          1200,
+          "stone-house-1200.f6323ea60b.avif"
+        ],
+        [
+          1600,
+          "stone-house-1600.f6323ea60b.avif"
+        ],
+        [
+          2000,
+          "stone-house-2000.f6323ea60b.avif"
+        ]
+      ],
+      "webp": [
+        [
+          480,
+          "stone-house-480.f6323ea60b.webp"
+        ],
+        [
+          800,
+          "stone-house-800.f6323ea60b.webp"
+        ],
+        [
+          1200,
+          "stone-house-1200.f6323ea60b.webp"
+        ],
+        [
+          1600,
+          "stone-house-1600.f6323ea60b.webp"
+        ],
+        [
+          2000,
+          "stone-house-2000.f6323ea60b.webp"
+        ]
+      ],
+      "jpg": [
+        [
+          480,
+          "stone-house-480.f6323ea60b.jpg"
+        ],
+        [
+          800,
+          "stone-house-800.f6323ea60b.jpg"
+        ],
+        [
+          1200,
+          "stone-house-1200.f6323ea60b.jpg"
+        ],
+        [
+          1600,
+          "stone-house-1600.f6323ea60b.jpg"
+        ],
+        [
+          2000,
+          "stone-house-2000.f6323ea60b.jpg"
+        ]
+      ]
+    }
+  },
+  "river-room": {
+    "src": "photos/placeholders/river-room.svg",
+    "hash": "c99859831c",
+    "width": 2000,
+    "height": 1333,
+    "color": "#e8d8c8",
+    "files": {
+      "avif": [
+        [
+          480,
+          "river-room-480.c99859831c.avif"
+        ],
+        [
+          800,
+          "river-room-800.c99859831c.avif"
+        ],
+        [
+          1200,
+          "river-room-1200.c99859831c.avif"
+        ],
+        [
+          1600,
+          "river-room-1600.c99859831c.avif"
+        ],
+        [
+          2000,
+          "river-room-2000.c99859831c.avif"
+        ]
+      ],
+      "webp": [
+        [
+          480,
+          "river-room-480.c99859831c.webp"
+        ],
+        [
+          800,
+          "river-room-800.c99859831c.webp"
+        ],
+        [
+          1200,
+          "river-room-1200.c99859831c.webp"
+        ],
+        [
+          1600,
+          "river-room-1600.c99859831c.webp"
+        ],
+        [
+          2000,
+          "river-room-2000.c99859831c.webp"
+        ]
+      ],
+      "jpg": [
+        [
+          480,
+          "river-room-480.c99859831c.jpg"
+        ],
+        [
+          800,
+          "river-room-800.c99859831c.jpg"
+        ],
+        [
+          1200,
+          "river-room-1200.c99859831c.jpg"
+        ],
+        [
+          1600,
+          "river-room-1600.c99859831c.jpg"
+        ],
+        [
+          2000,
+          "river-room-2000.c99859831c.jpg"
+        ]
+      ]
+    }
+  },
+  "coast-town": {
+    "src": "photos/placeholders/coast-town.svg",
+    "hash": "7785c29186",
+    "width": 2000,
+    "height": 1333,
+    "color": "#e8c8a8",
+    "files": {
+      "avif": [
+        [
+          480,
+          "coast-town-480.7785c29186.avif"
+        ],
+        [
+          800,
+          "coast-town-800.7785c29186.avif"
+        ],
+        [
+          1200,
+          "coast-town-1200.7785c29186.avif"
+        ],
+        [
+          1600,
+          "coast-town-1600.7785c29186.avif"
+        ],
+        [
+          2000,
+          "coast-town-2000.7785c29186.avif"
+        ]
+      ],
+      "webp": [
+        [
+          480,
+          "coast-town-480.7785c29186.webp"
+        ],
+        [
+          800,
+          "coast-town-800.7785c29186.webp"
+        ],
+        [
+          1200,
+          "coast-town-1200.7785c29186.webp"
+        ],
+        [
+          1600,
+          "coast-town-1600.7785c29186.webp"
+        ],
+        [
+          2000,
+          "coast-town-2000.7785c29186.webp"
+        ]
+      ],
+      "jpg": [
+        [
+          480,
+          "coast-town-480.7785c29186.jpg"
+        ],
+        [
+          800,
+          "coast-town-800.7785c29186.jpg"
+        ],
+        [
+          1200,
+          "coast-town-1200.7785c29186.jpg"
+        ],
+        [
+          1600,
+          "coast-town-1600.7785c29186.jpg"
+        ],
+        [
+          2000,
+          "coast-town-2000.7785c29186.jpg"
+        ]
+      ]
+    }
+  },
+  "sea-studio": {
+    "src": "photos/placeholders/sea-studio.svg",
+    "hash": "2a5d49fdb2",
+    "width": 2000,
+    "height": 1333,
+    "color": "#f8e8d8",
+    "files": {
+      "avif": [
+        [
+          480,
+          "sea-studio-480.2a5d49fdb2.avif"
+        ],
+        [
+          800,
+          "sea-studio-800.2a5d49fdb2.avif"
+        ],
+        [
+          1200,
+          "sea-studio-1200.2a5d49fdb2.avif"
+        ],
+        [
+          1600,
+          "sea-studio-1600.2a5d49fdb2.avif"
+        ],
+        [
+          2000,
+          "sea-studio-2000.2a5d49fdb2.avif"
+        ]
+      ],
+      "webp": [
+        [
+          480,
+          "sea-studio-480.2a5d49fdb2.webp"
+        ],
+        [
+          800,
+          "sea-studio-800.2a5d49fdb2.webp"
+        ],
+        [
+          1200,
+          "sea-studio-1200.2a5d49fdb2.webp"
+        ],
+        [
+          1600,
+          "sea-studio-1600.2a5d49fdb2.webp"
+        ],
+        [
+          2000,
+          "sea-studio-2000.2a5d49fdb2.webp"
+        ]
+      ],
+      "jpg": [
+        [
+          480,
+          "sea-studio-480.2a5d49fdb2.jpg"
+        ],
+        [
+          800,
+          "sea-studio-800.2a5d49fdb2.jpg"
+        ],
+        [
+          1200,
+          "sea-studio-1200.2a5d49fdb2.jpg"
+        ],
+        [
+          1600,
+          "sea-studio-1600.2a5d49fdb2.jpg"
+        ],
+        [
+          2000,
+          "sea-studio-2000.2a5d49fdb2.jpg"
+        ]
+      ]
+    }
+  },
+  "sea-balcony": {
+    "src": "photos/placeholders/sea-balcony.svg",
+    "hash": "0ada64460a",
+    "width": 2000,
+    "height": 1333,
+    "color": "#c8d8e8",
+    "files": {
+      "avif": [
+        [
+          480,
+          "sea-balcony-480.0ada64460a.avif"
+        ],
+        [
+          800,
+          "sea-balcony-800.0ada64460a.avif"
+        ],
+        [
+          1200,
+          "sea-balcony-1200.0ada64460a.avif"
+        ],
+        [
+          1600,
+          "sea-balcony-1600.0ada64460a.avif"
+        ],
+        [
+          2000,
+          "sea-balcony-2000.0ada64460a.avif"
+        ]
+      ],
+      "webp": [
+        [
+          480,
+          "sea-balcony-480.0ada64460a.webp"
+        ],
+        [
+          800,
+          "sea-balcony-800.0ada64460a.webp"
+        ],
+        [
+          1200,
+          "sea-balcony-1200.0ada64460a.webp"
+        ],
+        [
+          1600,
+          "sea-balcony-1600.0ada64460a.webp"
+        ],
+        [
+          2000,
+          "sea-balcony-2000.0ada64460a.webp"
+        ]
+      ],
+      "jpg": [
+        [
+          480,
+          "sea-balcony-480.0ada64460a.jpg"
+        ],
+        [
+          800,
+          "sea-balcony-800.0ada64460a.jpg"
+        ],
+        [
+          1200,
+          "sea-balcony-1200.0ada64460a.jpg"
+        ],
+        [
+          1600,
+          "sea-balcony-1600.0ada64460a.jpg"
+        ],
+        [
+          2000,
+          "sea-balcony-2000.0ada64460a.jpg"
+        ]
+      ]
+    }
+  }
+}
