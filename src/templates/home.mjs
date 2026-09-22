@@ -142,7 +142,6 @@ function services(ctx) {
       ${s.items.map((item, i) => `<article class="svc" data-reveal>
         <div class="svc__top">
           ${stamp(icon(item.icon), { cls: 'svc__stamp', face: faces[i % faces.length] })}
-          <span class="svc__num" aria-hidden="true">0${i + 1}</span>
         </div>
         <h3>${esc(item.title)}</h3>
         <p>${esc(item.body)}</p>

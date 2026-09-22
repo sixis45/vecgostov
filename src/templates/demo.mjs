@@ -21,12 +21,12 @@ export function renderDemo(ctx, demo) {
   const [g1, g2, g3] = demo.gallery;
 
   const body = `<a class="skip" href="#main">${esc(t.ui.skip)}</a>
-<div class="demo-bar" role="note">
+<aside class="demo-bar" aria-label="${esc(t.examples.badge)}">
   <div class="wrap demo-bar__in">
     <p>${stamp(esc(t.examples.badge), { cls: 'demo-bar__stamp' })}<span>${esc(T.bar)}</span></p>
     <a class="demo-bar__back" href="${homeExamples}">${icon('arrow-left')}<span>${esc(T.back)}</span></a>
   </div>
-</div>
+</aside>
 <header class="hdr d-hdr" data-header>
   <div class="wrap hdr__in">
     <a class="wordmark d-logo" href="#main">${esc(d.name)}</a>

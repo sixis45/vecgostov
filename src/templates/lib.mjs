@@ -38,7 +38,7 @@ export function plural(ctx, forms, n) {
 }
 
 export function money(ctx, amount) {
-  return new Intl.NumberFormat(ctx.t.ogLocale.replace('_', '-'), { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(amount);
+  return new Intl.NumberFormat(ctx.t.ogLocale.replace('_', '-'), { style: 'currency', currency: 'EUR', maximumFractionDigits: 0, useGrouping: 'always' }).format(amount);
 }
 
 // ---- Contact links ----------------------------------------------------------
@@ -83,7 +83,7 @@ export function langSwitch(ctx, { cls = '' } = {}) {
     const ids = esc(JSON.stringify(ctx.site.i18n[l].ids));
     return `<a href="${ctx.alternates[l]}" hreflang="${l}" lang="${l}" data-lang-switch data-ids="${ids}"><span class="sr-only">${esc(name)} — </span>${label}</a>`;
   });
-  return `<nav class="lang${cls ? ' ' + cls : ''}" aria-label="${esc(ctx.t.ui.language)}">${items.join('')}</nav>`;
+  return `<div class="lang${cls ? ' ' + cls : ''}" role="group" aria-label="${esc(ctx.t.ui.language)}">${items.join('')}</div>`;
 }
 
 export function stamp(text, { cls = '', face = '' } = {}) {

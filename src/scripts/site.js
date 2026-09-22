@@ -40,7 +40,7 @@
     // Keep keyboard focus inside the open menu.
     header.addEventListener('keydown', (e) => {
       if (e.key !== 'Tab' || !header.classList.contains('is-open')) return;
-      const items = [button, ...nav.querySelectorAll('a, button')].filter((el) => el.offsetParent !== null);
+      const items = [...header.querySelectorAll('a[href], button')].filter((el) => el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden');
       const first = items[0];
       const last = items[items.length - 1];
       if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
@@ -142,7 +142,7 @@
   const calc = document.querySelector('[data-calc]');
   if (calc) {
     const locale = calc.dataset.locale || 'sl-SI';
-    const money = new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
+    const money = new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0, useGrouping: 'always' });
     const pct = new Intl.NumberFormat(locale, { style: 'percent', maximumFractionDigits: 0 });
     const inputs = Object.fromEntries([...calc.querySelectorAll('[data-calc-in]')].map((i) => [i.dataset.calcIn, i]));
     const outs = Object.fromEntries([...calc.querySelectorAll('[data-calc-out]')].map((o) => [o.dataset.calcOut, o]));

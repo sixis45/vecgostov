@@ -43,7 +43,7 @@ export function renderStyleTile(ctx, tokens) {
   <div class="wrap">
     <header class="tile__head">
       <p class="kicker">${esc(s.title)}</p>
-      <p class="tile__brand wordmark">${wordmark(site.BRAND_NAME)}</p>
+      <h1 class="tile__brand wordmark">${wordmark(site.BRAND_NAME)}</h1>
       <p class="tile__intro">${esc(s.intro)}</p>
     </header>
 
@@ -77,7 +77,7 @@ export function renderStyleTile(ctx, tokens) {
       <section class="tile__block" aria-labelledby="tile-card">
         <h2 id="tile-card" class="tile__label">${esc(s.card)}</h2>
         <article class="svc">
-          <div class="svc__top">${stamp(icon('pin'), { cls: 'svc__stamp', face: 'stamp__face--river' })}<span class="svc__num" aria-hidden="true">02</span></div>
+          <div class="svc__top">${stamp(icon('pin'), { cls: 'svc__stamp', face: 'stamp__face--river' })}</div>
           <h3>${esc(t.services.items[1].title)}</h3>
           <p>${esc(t.services.items[1].body)}</p>
         </article>

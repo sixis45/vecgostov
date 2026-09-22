@@ -258,9 +258,9 @@ a:hover { color: var(--river-deep); text-decoration-thickness: 2px; }
   place-items: center;
   width: 5.8rem;
   height: 5.8rem;
-  border: 1.5px solid currentColor;
+  border: 1.5px solid rgb(29 100 121 / 0.5);
   border-radius: 50%;
-  color: rgb(29 100 121 / 0.62);
+  color: var(--river);
   font-family: var(--font-body);
   font-size: 0.5rem;
   font-weight: 700;
@@ -275,9 +275,8 @@ a:hover { color: var(--river-deep); text-decoration-thickness: 2px; }
   content: "";
   position: absolute;
   inset: 4px;
-  border: 1px solid currentColor;
+  border: 1px solid rgb(29 100 121 / 0.4);
   border-radius: 50%;
-  opacity: 0.7;
 }
 .postmark > span { display: grid; gap: 0.1rem; max-width: 4.6rem; }
 .postmark > span > span { display: block; }
@@ -288,7 +287,7 @@ a:hover { color: var(--river-deep); text-decoration-thickness: 2px; }
   width: 4.5rem;
   height: 1.6rem;
   translate: 0 -50%;
-  stroke: currentColor;
+  stroke: rgb(29 100 121 / 0.5);
   stroke-width: 1.5;
   fill: none;
 }
