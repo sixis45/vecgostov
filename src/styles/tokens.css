@@ -1,0 +1,123 @@
+/* ==========================================================================
+   Več gostov — design tokens
+   The single source of colour, type, spacing and shape for the website,
+   the demo pages and the style tile (/style-tile/). Change a value here
+   and every page follows after `npm run build`.
+   ========================================================================== */
+
+/* Fonts are self-hosted (no requests to Google). See scripts/subset-fonts.sh. */
+@font-face {
+  font-family: "Fraunces Soft";
+  src: url("../assets/fonts/fraunces-soft.woff2") format("woff2");
+  font-weight: 300 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces Soft";
+  src: url("../assets/fonts/fraunces-soft-italic.woff2") format("woff2");
+  font-weight: 300 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Figtree";
+  src: url("../assets/fonts/figtree.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+/* Metric-matched fallbacks so text doesn't jump when the web fonts arrive. */
+@font-face {
+  font-family: "Fraunces Fallback";
+  src: local("Georgia"), local("Times New Roman");
+  size-adjust: 98%;
+  ascent-override: 99%;
+  descent-override: 26%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Figtree Fallback";
+  src: local("Arial"), local("Helvetica Neue"), local("Helvetica");
+  size-adjust: 102%;
+  ascent-override: 93%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
+:root {
+  /* ---- Colour ------------------------------------------------------------
+     Contrast (WCAG 2.1) on --linen: ink 14.2, ink-soft 7.2, terra 5.1,
+     river 6.2, alpine 8.9. White on terra 5.5, on river 6.7.
+     --sun is decorative only — never use it for text on light surfaces. */
+  --linen: #faf6ef;       /* page background: warm linen */
+  --paper: #fffdf9;       /* cards, postcards */
+  --sand: #f3ebdf;        /* alternate section background */
+  --sand-deep: #e9dccb;
+  --line: #e4d8c6;        /* hairlines and borders */
+  --ink: #2a2420;         /* body text: dark warm grey */
+  --ink-soft: #5c5149;    /* secondary text */
+  --terra: #b04a25;       /* warm accent: primary buttons, key words */
+  --terra-deep: #8f3a1b;  /* hover / pressed */
+  --terra-mist: #f6e3d8;
+  --sun: #e4a23a;         /* honey: stamps, highlights (decorative) */
+  --sun-mist: #fbecd0;
+  --river: #1d6479;       /* cool accent: links, focus, secondary */
+  --river-deep: #164e5f;
+  --river-mist: #e4eff1;
+  --alpine: #2e4b3c;      /* deep alpine green: footer, contrast blocks */
+  --alpine-mist: #e8eee4;
+
+  /* ---- Type -------------------------------------------------------------- */
+  --font-display: "Fraunces Soft", "Fraunces Fallback", Georgia, "Times New Roman", serif;
+  --font-body: "Figtree", "Figtree Fallback", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --step--1: clamp(0.84rem, 0.82rem + 0.1vw, 0.9rem);
+  --step-0: clamp(1rem, 0.97rem + 0.15vw, 1.09rem);
+  --step-1: clamp(1.14rem, 1.08rem + 0.3vw, 1.3rem);
+  --step-2: clamp(1.35rem, 1.22rem + 0.65vw, 1.75rem);
+  --step-3: clamp(1.7rem, 1.45rem + 1.25vw, 2.5rem);
+  --step-4: clamp(2.1rem, 1.66rem + 2.2vw, 3.5rem);
+  --step-5: clamp(2.45rem, 1.8rem + 3.3vw, 4.6rem);
+
+  --leading-tight: 1.08;
+  --leading-snug: 1.25;
+  --leading: 1.6;
+
+  /* ---- Space ------------------------------------------------------------- */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-s: 1rem;
+  --space-m: 1.5rem;
+  --space-l: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4.5rem;
+  --space-3xl: 6.5rem;
+  --gutter: clamp(1rem, 0.55rem + 2.2vw, 2.5rem);
+  --section: clamp(4.5rem, 3rem + 6vw, 8.5rem);
+  --max: 76rem;
+  --max-text: 38rem;
+
+  /* ---- Shape & depth ----------------------------------------------------- */
+  --radius-s: 8px;
+  --radius-m: 14px;
+  --radius-l: 22px;
+  --radius-pill: 999px;
+  --shadow-s: 0 1px 2px rgb(74 52 30 / 0.06), 0 2px 8px rgb(74 52 30 / 0.05);
+  --shadow-m: 0 2px 4px rgb(74 52 30 / 0.05), 0 14px 30px -10px rgb(74 52 30 / 0.2);
+  --shadow-l: 0 4px 10px rgb(74 52 30 / 0.06), 0 34px 70px -24px rgb(74 52 30 / 0.34);
+  --focus: 0 0 0 3px var(--linen), 0 0 0 5px var(--river);
+
+  /* ---- Motion ------------------------------------------------------------ */
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur-fast: 180ms;
+  --dur: 650ms;
+
+  /* ---- Layout ------------------------------------------------------------ */
+  --header-h: 4rem;
+  --tap: 44px;             /* minimum touch target */
+}
+@media (min-width: 60em) {
+  :root { --header-h: 4.75rem; }
+}
