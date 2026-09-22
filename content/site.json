@@ -1,0 +1,1120 @@
+{
+  "_readme": "All text, prices, contact details and photos for the site. Edit here, then run `npm run build`. Guide: docs/EDITING.md. Anything containing XXX, example.com or 00 000 000 is a placeholder and is highlighted on the page until you replace it. FAQ answers with \"confirm\": true show a small 'draft' tag until you set it to false.",
+  "BRAND_NAME": "Več gostov",
+  "site": {
+    "_domain": "Leave empty until the real domain is known, e.g. \"https://apartmaji.matejdoljak.com\" (no trailing slash). Filling it in turns on canonical, hreflang, og:url, sitemap.xml and the Sitemap line in robots.txt.",
+    "domain": "",
+    "locales": ["sl", "en"],
+    "defaultLocale": "sl",
+    "studio": {
+      "name": "Matej Doljak",
+      "url": "https://matejdoljak.com"
+    },
+    "themeColor": "#FAF6EF"
+  },
+  "contact": {
+    "_note": "PLACEHOLDERS. Replace all three with real values. Phone and WhatsApp in international format (+386 …).",
+    "email": "ponudba@example.com",
+    "phone": "+386 00 000 000",
+    "whatsapp": "+386 00 000 000"
+  },
+  "prices": {
+    "_note": "PLACEHOLDERS. Write the price exactly as it should appear, e.g. \"€890\" or \"od €890\".",
+    "start": "€XXX",
+    "plus": "€XXX",
+    "complete": "€XXX",
+    "care": "€XX"
+  },
+  "calculator": {
+    "_note": "Starting values for the commission calculator in the 'why' section. Visitors move the sliders; nothing is sent anywhere. ranges = [min, max, step].",
+    "price": 80,
+    "nights": 120,
+    "commission": 15,
+    "direct": 20,
+    "ranges": {
+      "price": [30, 400, 5],
+      "nights": [10, 365, 5],
+      "commission": [0, 30, 1],
+      "direct": [0, 100, 5]
+    }
+  },
+  "images": {
+    "_note": "src = source file in photos/. After changing a src, run `npm run images` and commit src/assets/img/. Alt text lives in i18n.<lang>.alt. Every image is replaceable. placeholder: true = illustrated stand-in drawn for this site; swap for a real photo when you have one. position = which part of the photo stays visible when it is cropped (CSS object-position).",
+    "hero": {
+      "src": "photos/stock/interior.jpg",
+      "placeholder": false,
+      "replaceable": true,
+      "position": "58% 55%",
+      "credit": "EZcurtain Life on Unsplash",
+      "license": "Unsplash License (free for commercial use, no attribution required) — https://unsplash.com/license",
+      "sourceUrl": "https://unsplash.com/photos/cozy-living-room-with-neutral-tones-and-natural-light-srzKmNLovaQ"
+    },
+    "lake": {
+      "src": "photos/stock/lake.jpg",
+      "placeholder": false,
+      "replaceable": true,
+      "position": "60% 50%",
+      "credit": "Fajar Al Hadi on Unsplash",
+      "license": "Unsplash License (free for commercial use, no attribution required) — https://unsplash.com/license",
+      "sourceUrl": "https://unsplash.com/photos/scenic-view-of-lake-bled-and-its-island-NK-GQrcM0Ko"
+    },
+    "alpine-balcony": {
+      "src": "photos/placeholders/alpine-balcony.svg",
+      "placeholder": true,
+      "replaceable": true,
+      "wanted": "Balcony or terrace with a mountain view, coffee on the table.",
+      "credit": "Illustrated placeholder — Več gostov",
+      "license": "Own work",
+      "sourceUrl": ""
+    },
+    "alpine-bedroom": {
+      "src": "photos/placeholders/alpine-bedroom.svg",
+      "placeholder": true,
+      "replaceable": true,
+      "wanted": "Bedroom with wood and linen, window with a view.",
+      "credit": "Illustrated placeholder — Več gostov",
+      "license": "Own work",
+      "sourceUrl": ""
+    },
+    "soca-river": {
+      "src": "photos/placeholders/soca-river.svg",
+      "placeholder": true,
+      "replaceable": true,
+      "wanted": "Emerald river in a green valley (e.g. the Soča).",
+      "credit": "Illustrated placeholder — Več gostov",
+      "license": "Own work",
+      "sourceUrl": ""
+    },
+    "stone-house": {
+      "src": "photos/placeholders/stone-house.svg",
+      "placeholder": true,
+      "replaceable": true,
+      "wanted": "Stone holiday house with a garden.",
+      "credit": "Illustrated placeholder — Več gostov",
+      "license": "Own work",
+      "sourceUrl": ""
+    },
+    "river-room": {
+      "src": "photos/placeholders/river-room.svg",
+      "placeholder": true,
+      "replaceable": true,
+      "wanted": "Cosy living room with wooden details.",
+      "credit": "Illustrated placeholder — Več gostov",
+      "license": "Own work",
+      "sourceUrl": ""
+    },
+    "coast-town": {
+      "src": "photos/placeholders/coast-town.svg",
+      "placeholder": true,
+      "replaceable": true,
+      "wanted": "Seaside old town at golden hour (e.g. Piran).",
+      "credit": "Illustrated placeholder — Več gostov",
+      "license": "Own work",
+      "sourceUrl": ""
+    },
+    "sea-studio": {
+      "src": "photos/placeholders/sea-studio.svg",
+      "placeholder": true,
+      "replaceable": true,
+      "wanted": "Small bright studio with a sea view.",
+      "credit": "Illustrated placeholder — Več gostov",
+      "license": "Own work",
+      "sourceUrl": ""
+    },
+    "sea-balcony": {
+      "src": "photos/placeholders/sea-balcony.svg",
+      "placeholder": true,
+      "replaceable": true,
+      "wanted": "Small balcony with a view of the sea.",
+      "credit": "Illustrated placeholder — Več gostov",
+      "license": "Own work",
+      "sourceUrl": ""
+    }
+  },
+  "demos": [
+    {
+      "slug": "brin",
+      "theme": "alpine",
+      "hero": "lake",
+      "gallery": ["hero", "alpine-bedroom", "alpine-balcony"],
+      "facts": {
+        "guests": 4,
+        "bedrooms": 2,
+        "size": "55 m²"
+      },
+      "amenities": ["wifi", "parking", "kitchen", "balcony", "washer", "bike"]
+    },
+    {
+      "slug": "smaragd",
+      "theme": "river",
+      "hero": "soca-river",
+      "gallery": ["stone-house", "river-room", "alpine-bedroom"],
+      "facts": {
+        "guests": 6,
+        "bedrooms": 3,
+        "size": "90 m²"
+      },
+      "amenities": ["wifi", "parking", "kitchen", "garden", "grill", "pets"]
+    },
+    {
+      "slug": "sol",
+      "theme": "coast",
+      "hero": "coast-town",
+      "gallery": ["sea-studio", "sea-balcony", "hero"],
+      "facts": {
+        "guests": 2,
+        "size": "32 m²"
+      },
+      "amenities": ["wifi", "aircon", "kitchen", "balcony", "coffee", "nocar"]
+    }
+  ],
+  "testimonials": {
+    "_note": "Empty on purpose. Add real quotes from real clients (with their permission), then set enabled to true.",
+    "enabled": false,
+    "items": []
+  },
+  "i18n": {
+    "sl": {
+      "langName": "Slovenščina",
+      "ogLocale": "sl_SI",
+      "paths": {
+        "home": "/",
+        "demos": "/primeri/"
+      },
+      "ids": {
+        "why": "zakaj",
+        "services": "storitve",
+        "examples": "primeri",
+        "process": "potek",
+        "pricing": "paketi",
+        "faq": "vprasanja",
+        "contact": "kontakt",
+        "testimonials": "mnenja"
+      },
+      "meta": {
+        "title": "Več gostov — spletne strani za apartmaje in počitniške hiše",
+        "description": "Lepa lastna spletna stran, vidnost na Google Maps in neposredna povpraševanja. Za apartmaje, počitniške hiše in turistične kmetije v Sloveniji.",
+        "ogImageAlt": "Več gostov — spletne strani za apartmaje in počitniške hiše"
+      },
+      "ui": {
+        "skip": "Preskoči na vsebino",
+        "home": "Več gostov — na začetek",
+        "navLabel": "Glavna navigacija",
+        "menu": "Meni",
+        "menuOpen": "Odpri meni",
+        "menuClose": "Zapri meni",
+        "language": "Jezik",
+        "placeholder": "Začasno",
+        "draft": "Osnutek",
+        "external": "zunanja povezava"
+      },
+      "nav": [
+        {
+          "key": "services",
+          "label": "Storitve"
+        },
+        {
+          "key": "examples",
+          "label": "Primeri"
+        },
+        {
+          "key": "process",
+          "label": "Potek"
+        },
+        {
+          "key": "pricing",
+          "label": "Paketi"
+        },
+        {
+          "key": "faq",
+          "label": "Vprašanja"
+        }
+      ],
+      "cta": {
+        "primary": "Zahtevaj brezplačno ponudbo",
+        "short": "Brezplačna ponudba"
+      },
+      "hero": {
+        "kicker": "Spletne strani za apartmaje in počitniške hiše",
+        "title": "Več gostov, ki rezervirajo {neposredno} pri vas.",
+        "lead": "Lepa lastna spletna stran, vidnost na Google Maps in preprosto povpraševanje za termin. Da vas gostje najdejo sami — in vam pišejo brez posrednika.",
+        "secondary": "Poglej primere",
+        "note": "Brezplačna ponudba, brez obveznosti.",
+        "postcard": {
+          "title": "Dobrodošli neposredno.",
+          "items": ["Lastna stran v jezikih vaših gostov", "Vaš apartma na Google Maps", "Povpraševanja naravnost k vam"],
+          "stamp": "SI",
+          "postmark": "Več gostov · Slovenija"
+        },
+        "photoCard": "Pozdrav iz Alp"
+      },
+      "why": {
+        "kicker": "Zakaj lastna stran",
+        "title": "Na Bookingu ste eden od mnogih. Na svoji strani ste edini.",
+        "body": "Platforme so odlične za prve goste. A če so edina pot do vas, vsak gost stane provizijo — tudi tisti, ki se vrača.",
+        "points": [
+          {
+            "icon": "percent",
+            "title": "Provizija pri vsaki rezervaciji",
+            "body": "Tudi gost, ki pride že tretjič, gre skozi platformo. Z lastno stranjo vam lahko piše neposredno."
+          },
+          {
+            "icon": "search",
+            "title": "Na Googlu vas je težko najti",
+            "body": "Ko nekdo išče apartma v vašem kraju, pogosto vidi le platforme in sosede. Urejen profil na Google Maps pokaže tudi vas."
+          },
+          {
+            "icon": "phone",
+            "title": "Stara stran odganja goste",
+            "body": "Stran, ki se na telefonu ne prilagodi ali se nalaga predolgo, gostu ne da razloga, da ostane."
+          },
+          {
+            "icon": "rules",
+            "title": "Pravila pišejo drugi",
+            "body": "O spremembah algoritmov, pogojev in provizij ne odločate vi. Lastna stran je vedno vaša."
+          }
+        ],
+        "calm": "Booking.com in Airbnb lahko mirno ostaneta. Lastna stran je vaš drugi, neposredni vhod."
+      },
+      "calc": {
+        "title": "Koliko vas stanejo provizije?",
+        "intro": "Premaknite drsnike na svoje številke. Izračun je informativen in se zgodi samo v vašem brskalniku.",
+        "price": "Povprečna cena na noč",
+        "nights": "Zasedene noči na leto",
+        "commission": "Provizija platforme",
+        "direct": "Delež gostov, ki bi rezervirali neposredno",
+        "year": "Provizije na leto",
+        "keep": "Če {share} gostov rezervira neposredno, vam na leto ostane {keep}.",
+        "nightsUnit": "noči"
+      },
+      "services": {
+        "kicker": "Kaj dobite",
+        "title": "Vse, kar potrebujete, da vas gostje najdejo in vam pišejo.",
+        "intro": "Za tehnični del poskrbim jaz. Vi mi poveste, kaj je pri vas posebnega.",
+        "items": [
+          {
+            "icon": "site",
+            "title": "Moderna spletna stran",
+            "body": "Lepa, hitra in narejena najprej za telefon. V slovenščini, angleščini in jezikih, ki jih govorijo vaši gostje.",
+            "points": ["Prilagojena telefonu in računalniku", "Hitro nalaganje", "Več jezikov"]
+          },
+          {
+            "icon": "pin",
+            "title": "Google Maps in Business Profile",
+            "body": "Uredim ali izboljšam vaš profil: prave podatke, lepe fotografije in povezavo do vaše strani. Da vas najdejo tudi tisti, ki iščejo na zemljevidu.",
+            "points": ["Nastavitev ali prenova profila", "Fotografije in opis", "Povezava do vaše strani"]
+          },
+          {
+            "icon": "calendar",
+            "title": "Neposredno povpraševanje",
+            "body": "Gost izbere datume in število oseb ter vam pošlje povpraševanje. Vi preverite in potrdite termin — brez provizije in brez posrednika.",
+            "points": ["Obrazec za prost termin", "Sporočila naravnost na vaš e-naslov", "Termin vedno potrdite vi"]
+          },
+          {
+            "icon": "camera",
+            "title": "Fotografije, ki prodajo občutek",
+            "body": "Pokažem vam, kaj fotografirati in kako, da gost začuti jutro na vašem balkonu, še preden pride.",
+            "points": ["Seznam kadrov za vaš prostor", "Nasveti za svetlobo in urejenost", "Izbor najboljših fotografij"]
+          }
+        ],
+        "addon": {
+          "kicker": "Dodatek po želji",
+          "title": "360° virtualni sprehod",
+          "body": "Gost se lahko razgleda po apartmaju, še preden rezervira. Na voljo kot dodatek k vsakemu paketu."
+        }
+      },
+      "examples": {
+        "kicker": "Primeri",
+        "title": "Tako je lahko videti vaša stran.",
+        "intro": "Trije primeri za izmišljene nastanitve, vsak s svojim značajem. Odprite jih — najbolje kar na telefonu.",
+        "notice": "Primeri so oblikovalski demo za izmišljene nastanitve, ne dela za stranke.",
+        "badge": "Demo",
+        "open": "Odpri primer"
+      },
+      "process": {
+        "kicker": "Potek",
+        "title": "Od prvega klica do prvega gosta.",
+        "intro": "Štirje preprosti koraki. Vaše delo je predvsem to, da mi poveste o svojem prostoru.",
+        "steps": [
+          {
+            "title": "Pogovor",
+            "body": "Pokličete ali pišete. Pogovorimo se o nastanitvi, gostih in vaših željah. Dobite brezplačno ponudbo."
+          },
+          {
+            "title": "Fotografije in vsebina",
+            "body": "Skupaj izberemo fotografije in pripravimo besedila. Dobite jasen seznam, kaj potrebujem — nič tehničnega."
+          },
+          {
+            "title": "Izdelava strani",
+            "body": "Pripravim stran in vam jo pokažem. Popravke uskladimo, dokler ni prav."
+          },
+          {
+            "title": "Objava in Google Maps",
+            "body": "Stran gre na splet, vaš profil na Google Maps pa dobi povezavo nanjo. Gostje vam lahko pišejo neposredno."
+          }
+        ]
+      },
+      "pricing": {
+        "kicker": "Paketi",
+        "title": "Jasni paketi za vsako nastanitev.",
+        "intro": "Končno ceno potrdimo v ponudbi, glede na vašo nastanitev in želje.",
+        "oneOff": "enkratno",
+        "recommended": "Priporočeno",
+        "cta": "Vprašaj za ta paket",
+        "emailSubject": "Povpraševanje: paket {name}",
+        "care": "Gostovanje in skrb za stran: {price} na leto",
+        "pending": "Cene in obseg paketov so še v pripravi.",
+        "packages": [
+          {
+            "id": "start",
+            "name": "Start",
+            "for": "Za prvo lastno stran.",
+            "features": [
+              "Enostranska predstavitev nastanitve",
+              "Prilagojeno telefonu",
+              "Slovenščina in angleščina",
+              "Obrazec za povpraševanje",
+              "Osnovna optimizacija za Google"
+            ]
+          },
+          {
+            "id": "plus",
+            "name": "Več gostov",
+            "featured": true,
+            "for": "Za stran, ki goste pripelje tudi z zemljevida.",
+            "features": [
+              "Vse iz paketa Start",
+              "Google Business Profile in Google Maps",
+              "Do 4 jeziki",
+              "Galerija in opis okolice",
+              "Smernice za fotografije"
+            ]
+          },
+          {
+            "id": "complete",
+            "name": "Celovito",
+            "for": "Za nastanitve, ki želijo pokazati vse.",
+            "features": ["Vse iz paketa Več gostov", "Več enot ali podstrani", "360° virtualni sprehod"]
+          }
+        ]
+      },
+      "faq": {
+        "kicker": "Vprašanja",
+        "title": "Kar lastniki najpogosteje vprašajo.",
+        "aside": "Vas zanima še kaj?",
+        "asideLink": "Pišite mi",
+        "items": [
+          {
+            "q": "Ali potrebujem tehnično znanje?",
+            "a": "Ne. Za domeno, gostovanje, izdelavo in objavo poskrbim jaz. Vi mi pošljete fotografije in odgovorite na nekaj vprašanj o nastanitvi.",
+            "confirm": true
+          },
+          {
+            "q": "Ali lahko obdržim Booking.com in Airbnb?",
+            "a": "Seveda. Lastna stran platform ne nadomešča, ampak jih dopolni. Gostje, ki vas najdejo na Googlu ali se vračajo, vam lahko pišejo neposredno.",
+            "confirm": false
+          },
+          {
+            "q": "Kako se izognem dvojnim rezervacijam?",
+            "a": "Povpraševanje prek strani ni samodejna rezervacija. Termin vedno potrdite vi, ko preverite svoj koledar — tako kot pri telefonskem klicu.",
+            "confirm": false
+          },
+          {
+            "q": "Kdo je lastnik domene?",
+            "a": "Vi. Domena se registrira na vaše ime, zato ostane vaša, tudi če kdaj zamenjate izvajalca.",
+            "confirm": true
+          },
+          {
+            "q": "Koliko časa traja izdelava?",
+            "a": "Odvisno od obsega in od tega, kako hitro so pripravljene fotografije in besedila. Okvirni rok dobite v ponudbi.",
+            "confirm": true
+          },
+          {
+            "q": "V katerih jezikih je lahko stran?",
+            "a": "Osnova sta slovenščina in angleščina. Dodamo lahko nemščino, italijanščino ali druge jezike, ki jih govorijo vaši gostje.",
+            "confirm": true
+          },
+          {
+            "q": "Kaj, če kasneje želim kaj spremeniti?",
+            "a": "Spremembe besedil, cen ali fotografij uredim namesto vas. Kako in pod kakšnimi pogoji, zapišemo v ponudbo.",
+            "confirm": true
+          }
+        ]
+      },
+      "testimonials": {
+        "kicker": "Mnenja",
+        "title": "Kaj pravijo gostitelji."
+      },
+      "contact": {
+        "kicker": "Kontakt",
+        "title": "Povejte mi o svoji nastanitvi.",
+        "body": "Pošljite ime in kraj nastanitve ter povezavo do oglasa na Bookingu ali Airbnbju, če ga imate. Pripravim brezplačno ponudbo — brez obveznosti.",
+        "sign": "Matej",
+        "email": "Pošlji e-pošto",
+        "phone": "Pokliči",
+        "whatsapp": "Piši na WhatsApp",
+        "emailSubject": "Brezplačna ponudba za spletno stran nastanitve",
+        "emailBody": "Pozdravljeni,\n\nzanima me spletna stran za mojo nastanitev.\n\nIme nastanitve:\nKraj:\nPovezava do oglasa na Booking.com / Airbnb (če obstaja):\nTrenutna spletna stran (če obstaja):\n\nLep pozdrav,\n",
+        "whatsappText": "Pozdravljeni! Zanima me spletna stran za mojo nastanitev.",
+        "stamp": "SI",
+        "postmark": "Pošta · Več gostov",
+        "pending": "Kontaktni podatki so še začasni."
+      },
+      "footer": {
+        "tagline": "Spletne strani, Google Maps in neposredna povpraševanja za apartmaje in počitniške hiše v Sloveniji.",
+        "studio": "Ustvarja {name}",
+        "sections": "Na strani",
+        "contact": "Kontakt"
+      },
+      "notFound": {
+        "title": "Ta pot ne pelje nikamor.",
+        "body": "Stran, ki jo iščete, ne obstaja. Morda je bila povezava napačna — ali pa je stran odšla na dopust.",
+        "home": "Na začetno stran",
+        "english": "Page not found.",
+        "englishLink": "English homepage"
+      },
+      "demo": {
+        "bar": "Demo · izmišljena nastanitev. Primer strani, ki jo izdela Več gostov.",
+        "back": "Nazaj na Več gostov",
+        "nav": {
+          "about": "Apartma",
+          "gallery": "Galerija",
+          "area": "Okolica",
+          "inquiry": "Povpraševanje"
+        },
+        "ids": {
+          "about": "apartma",
+          "gallery": "galerija",
+          "area": "okolica",
+          "inquiry": "povprasevanje"
+        },
+        "checkDates": "Preveri prost termin",
+        "facts": {
+          "guests": {
+            "one": "{n} oseba",
+            "two": "{n} osebi",
+            "few": "{n} osebe",
+            "other": "{n} oseb"
+          },
+          "bedrooms": {
+            "one": "{n} spalnica",
+            "two": "{n} spalnici",
+            "few": "{n} spalnice",
+            "other": "{n} spalnic"
+          }
+        },
+        "galleryTitle": "Poglejte naokrog",
+        "amenitiesTitle": "V apartmaju",
+        "areaTitle": "V okolici",
+        "amenities": {
+          "wifi": "Brezžični internet",
+          "parking": "Brezplačno parkirišče",
+          "kitchen": "Opremljena kuhinja",
+          "balcony": "Balkon z razgledom",
+          "washer": "Pralni stroj",
+          "bike": "Shramba za kolesa",
+          "garden": "Vrt",
+          "grill": "Žar na prostem",
+          "pets": "Hišni ljubljenčki dobrodošli",
+          "aircon": "Klimatska naprava",
+          "coffee": "Aparat za kavo",
+          "nocar": "Vse dosegljivo peš"
+        },
+        "inquiryTitle": "Preverite prost termin",
+        "inquiryBody": "Izberite datume in pošljite povpraševanje. Gostitelj vam odgovori osebno in potrdi termin.",
+        "form": {
+          "arrival": "Prihod",
+          "departure": "Odhod",
+          "guests": "Gostje",
+          "name": "Ime in priimek",
+          "email": "E-pošta",
+          "message": "Sporočilo",
+          "submit": "Pošlji povpraševanje",
+          "sampleArrival": "12. 7.",
+          "sampleDeparture": "16. 7.",
+          "sampleGuests": "2 odrasla",
+          "sampleMessage": "Ali je v tem terminu prosto?"
+        },
+        "mockNote": "Demo: obrazec je samo prikaz in ne pošilja podatkov. Na vaši strani bi povpraševanje prišlo naravnost k vam.",
+        "footerTitle": "Bi želeli takšno stran za svojo nastanitev?",
+        "footerNote": "Izmišljena nastanitev. Fotografije in besedila so primer.",
+        "items": {
+          "brin": {
+            "name": "Apartma Brin",
+            "place": "Bled · Julijske Alpe",
+            "greeting": "Pozdrav z Bleda",
+            "tagline": "Jutranja kava z razgledom na jezero in gore.",
+            "about": [
+              "Svetel apartma z lesom, lanom in balkonom, s katerega vidite gore. Do jezera se sprehodite v desetih minutah.",
+              "Primeren je za pare in družine, ki iščejo mir, a želijo imeti vse blizu: pekarno, kolesarske poti in kopanje v jezeru."
+            ],
+            "area": [
+              {
+                "title": "Jezero",
+                "distance": "10 min peš",
+                "body": "Kopanje, čolni in sprehod okoli jezera."
+              },
+              {
+                "title": "Razgledi",
+                "distance": "20 min peš",
+                "body": "Kratki pohodi do razgledov nad dolino."
+              },
+              {
+                "title": "Kolesarjenje",
+                "distance": "pred vrati",
+                "body": "Poti za vse starosti in kondicijo."
+              }
+            ]
+          },
+          "smaragd": {
+            "name": "Hiša Smaragd",
+            "place": "Dolina Soče",
+            "greeting": "Pozdrav iz Posočja",
+            "tagline": "Hiša ob reki, kjer je voda res tako zelena.",
+            "about": [
+              "Kamnita hiša z vrtom, le nekaj korakov od reke. Za družine in prijatelje, ki pridejo zaradi reke, pohodov ali preprosto tišine.",
+              "Zvečer žar na vrtu, zjutraj kava ob šumenju vode."
+            ],
+            "area": [
+              {
+                "title": "Reka",
+                "distance": "2 min peš",
+                "body": "Kopanje in počitek ob kristalno čisti vodi."
+              },
+              {
+                "title": "Na vodi",
+                "distance": "10 min z avtom",
+                "body": "Rafting in kajak z lokalnimi vodniki."
+              },
+              {
+                "title": "Pohodi",
+                "distance": "pred vrati",
+                "body": "Poti do slapov in razgledov nad dolino."
+              }
+            ]
+          },
+          "sol": {
+            "name": "Studio Sol",
+            "place": "Piran · Slovenska obala",
+            "greeting": "Pozdrav iz Pirana",
+            "tagline": "Majhen studio, veliko morja.",
+            "about": [
+              "Prenovljen studio v starem mestnem jedru, z balkonom, s katerega se vidi morje.",
+              "Za dva, ki želita počitnice brez avtomobila: do morja, ribjih restavracij in sončnega zahoda na trgu je le nekaj minut."
+            ],
+            "area": [
+              {
+                "title": "Morje",
+                "distance": "3 min peš",
+                "body": "Kopanje s pomola in sprehod ob obali."
+              },
+              {
+                "title": "Mestni trg",
+                "distance": "5 min peš",
+                "body": "Kavarne, sladoled in sončni zahod."
+              },
+              {
+                "title": "Soline",
+                "distance": "15 min z avtom",
+                "body": "Solna polja in kolesarska pot ob morju."
+              }
+            ]
+          }
+        }
+      },
+      "alt": {
+        "hero": "Svetla dnevna soba apartmaja v jutranjem soncu, z lanenimi zavesami in lesenim podom.",
+        "lake": "Alpsko jezero z gorami v ozadju.",
+        "alpine-balcony": "Balkon z mizico, dvema skodelicama kave in razgledom na gore.",
+        "alpine-bedroom": "Spalnica z lesenim posteljnim vzglavjem, lanenim perilom in oknom z razgledom na gore.",
+        "soca-river": "Smaragdno zelena reka med gozdnatimi pobočji.",
+        "stone-house": "Kamnita počitniška hiša z vrtom pod gorami.",
+        "river-room": "Topel dnevni prostor z lesenimi detajli in oknom proti gozdu.",
+        "coast-town": "Obmorsko staro mesto z zvonikom ob sončnem zahodu.",
+        "sea-studio": "Svetel studio z oknom, skozi katerega se vidi morje.",
+        "sea-balcony": "Majhen balkon s pogledom na morje."
+      },
+      "styleTile": {
+        "title": "Slogovna ploščica",
+        "intro": "Vizualna smer za Več gostov: jutranje sonce, svetel les, lan, rečna modra in alpska zelena. Motiv: razglednica.",
+        "palette": "Barve",
+        "type": "Pisave",
+        "buttons": "Gumbi in povezave",
+        "card": "Kartica storitve",
+        "image": "Fotografija kot razglednica",
+        "headingSample": "Več gostov, ki rezervirajo neposredno.",
+        "bodySample": "Lepa lastna spletna stran, vidnost na Google Maps in preprosto povpraševanje za termin.",
+        "linkSample": "Besedilna povezava"
+      }
+    },
+    "en": {
+      "langName": "English",
+      "ogLocale": "en_GB",
+      "paths": {
+        "home": "/en/",
+        "demos": "/en/examples/"
+      },
+      "ids": {
+        "why": "why",
+        "services": "services",
+        "examples": "examples",
+        "process": "process",
+        "pricing": "pricing",
+        "faq": "faq",
+        "contact": "contact",
+        "testimonials": "testimonials"
+      },
+      "meta": {
+        "title": "Več gostov — websites for holiday apartments and homes in Slovenia",
+        "description": "A beautiful website of your own, a place on Google Maps and direct inquiries. For apartments, holiday homes and tourist farms in Slovenia.",
+        "ogImageAlt": "Več gostov — websites for holiday apartments and homes"
+      },
+      "ui": {
+        "skip": "Skip to content",
+        "home": "Več gostov — home",
+        "navLabel": "Main navigation",
+        "menu": "Menu",
+        "menuOpen": "Open menu",
+        "menuClose": "Close menu",
+        "language": "Language",
+        "placeholder": "Placeholder",
+        "draft": "Draft",
+        "external": "external link"
+      },
+      "nav": [
+        {
+          "key": "services",
+          "label": "Services"
+        },
+        {
+          "key": "examples",
+          "label": "Examples"
+        },
+        {
+          "key": "process",
+          "label": "How it works"
+        },
+        {
+          "key": "pricing",
+          "label": "Packages"
+        },
+        {
+          "key": "faq",
+          "label": "FAQ"
+        }
+      ],
+      "cta": {
+        "primary": "Request a free proposal",
+        "short": "Free proposal"
+      },
+      "hero": {
+        "kicker": "Websites for holiday apartments and homes",
+        "title": "More guests who book {directly} with you.",
+        "lead": "A beautiful website of your own, a place on Google Maps and an easy way to ask for dates. So guests find you themselves — and message you without a middleman.",
+        "secondary": "See examples",
+        "note": "Free proposal, no obligation.",
+        "postcard": {
+          "title": "Welcome, directly.",
+          "items": ["Your own site, in your guests’ languages", "Your place on Google Maps", "Inquiries straight to you"],
+          "stamp": "SI",
+          "postmark": "Več gostov · Slovenia"
+        },
+        "photoCard": "Greetings from the Alps"
+      },
+      "why": {
+        "kicker": "Why a website of your own",
+        "title": "On Booking.com you’re one of many. On your own site, you’re the only one.",
+        "body": "Platforms are great for first guests. But if they’re the only way to reach you, every guest costs a commission — returning ones too.",
+        "points": [
+          {
+            "icon": "percent",
+            "title": "A commission on every booking",
+            "body": "Even a guest coming back for the third time goes through the platform. With your own site, they can write to you directly."
+          },
+          {
+            "icon": "search",
+            "title": "Hard to find on Google",
+            "body": "When someone searches for an apartment in your town, they often see only platforms and neighbours. A proper Google Maps profile shows you too."
+          },
+          {
+            "icon": "phone",
+            "title": "An old site turns guests away",
+            "body": "A page that doesn’t fit a phone screen or takes too long to load gives guests no reason to stay."
+          },
+          {
+            "icon": "rules",
+            "title": "Someone else makes the rules",
+            "body": "You don’t decide on changes to algorithms, terms or commissions. Your own website is always yours."
+          }
+        ],
+        "calm": "Booking.com and Airbnb can stay. Your own site is your second, direct front door."
+      },
+      "calc": {
+        "title": "What do commissions cost you?",
+        "intro": "Move the sliders to match your numbers. It’s a rough estimate, calculated only in your browser.",
+        "price": "Average price per night",
+        "nights": "Nights booked per year",
+        "commission": "Platform commission",
+        "direct": "Share of guests who’d book directly",
+        "year": "Commission per year",
+        "keep": "If {share} of guests book directly, you keep {keep} a year.",
+        "nightsUnit": "nights"
+      },
+      "services": {
+        "kicker": "What you get",
+        "title": "Everything you need for guests to find you and get in touch.",
+        "intro": "I take care of the technical side. You tell me what makes your place special.",
+        "items": [
+          {
+            "icon": "site",
+            "title": "A modern website",
+            "body": "Beautiful, fast and built for phones first. In Slovenian, English and the languages your guests speak.",
+            "points": ["Works on phone and desktop", "Loads fast", "Multilingual"]
+          },
+          {
+            "icon": "pin",
+            "title": "Google Maps & Business Profile",
+            "body": "I set up or improve your profile: the right details, good photos and a link to your site. So people browsing the map find you too.",
+            "points": ["Profile setup or refresh", "Photos and description", "Link to your website"]
+          },
+          {
+            "icon": "calendar",
+            "title": "Direct inquiries",
+            "body": "Guests pick their dates and number of people and send you a request. You check and confirm — no commission, no middleman.",
+            "points": ["Availability request form", "Messages straight to your inbox", "You always confirm the dates"]
+          },
+          {
+            "icon": "camera",
+            "title": "Photos that sell the feeling",
+            "body": "I show you what to photograph and how, so guests can feel the morning on your balcony before they arrive.",
+            "points": ["A shot list for your place", "Tips on light and styling", "Picking the best photos"]
+          }
+        ],
+        "addon": {
+          "kicker": "Optional add-on",
+          "title": "360° virtual walk-through",
+          "body": "Guests can look around your apartment before they book. Available as an add-on to any package."
+        }
+      },
+      "examples": {
+        "kicker": "Examples",
+        "title": "This is what your website could look like.",
+        "intro": "Three examples for fictional places to stay, each with its own character. Open them — ideally on your phone.",
+        "notice": "These are design demos for fictional properties, not client work.",
+        "badge": "Demo",
+        "open": "Open example"
+      },
+      "process": {
+        "kicker": "How it works",
+        "title": "From the first call to the first guest.",
+        "intro": "Four simple steps. Your main job is telling me about your place.",
+        "steps": [
+          {
+            "title": "A conversation",
+            "body": "Call or write. We talk about your place, your guests and what you’d like. You get a free proposal."
+          },
+          {
+            "title": "Photos and content",
+            "body": "We choose the photos and prepare the texts together. You get a clear list of what I need — nothing technical."
+          },
+          {
+            "title": "Building the site",
+            "body": "I build the site and show it to you. We refine it until it feels right."
+          },
+          {
+            "title": "Live and on Google Maps",
+            "body": "The site goes live and your Google Maps profile links to it. Guests can now contact you directly."
+          }
+        ]
+      },
+      "pricing": {
+        "kicker": "Packages",
+        "title": "Clear packages for every place.",
+        "intro": "The final price is confirmed in your proposal, based on your property and what you need.",
+        "oneOff": "one-off",
+        "recommended": "Recommended",
+        "cta": "Ask about this package",
+        "emailSubject": "Inquiry: {name} package",
+        "care": "Hosting and site care: {price} per year",
+        "pending": "Prices and package details are still being finalised.",
+        "packages": [
+          {
+            "id": "start",
+            "name": "Start",
+            "for": "For your first website of your own.",
+            "features": [
+              "One-page property presentation",
+              "Built for phones",
+              "Slovenian and English",
+              "Inquiry form",
+              "Basic Google optimisation"
+            ]
+          },
+          {
+            "id": "plus",
+            "name": "Več gostov",
+            "featured": true,
+            "for": "For a site that brings guests in from the map, too.",
+            "features": [
+              "Everything in Start",
+              "Google Business Profile & Google Maps",
+              "Up to 4 languages",
+              "Gallery and local area guide",
+              "Photo guidance"
+            ]
+          },
+          {
+            "id": "complete",
+            "name": "Complete",
+            "for": "For places that want to show everything.",
+            "features": ["Everything in Več gostov", "Several units or subpages", "360° virtual walk-through"]
+          }
+        ]
+      },
+      "faq": {
+        "kicker": "FAQ",
+        "title": "What owners usually ask.",
+        "aside": "Anything else on your mind?",
+        "asideLink": "Write to me",
+        "items": [
+          {
+            "q": "Do I need any technical knowledge?",
+            "a": "No. I take care of the domain, hosting, building and publishing. You send me photos and answer a few questions about your place.",
+            "confirm": true
+          },
+          {
+            "q": "Can I keep Booking.com and Airbnb?",
+            "a": "Of course. Your own site doesn’t replace the platforms, it complements them. Guests who find you on Google or come back can write to you directly.",
+            "confirm": false
+          },
+          {
+            "q": "How do I avoid double bookings?",
+            "a": "An inquiry through the site isn’t an automatic booking. You always confirm the dates yourself after checking your calendar — just like with a phone call.",
+            "confirm": false
+          },
+          {
+            "q": "Who owns the domain?",
+            "a": "You do. The domain is registered in your name, so it stays yours even if you ever change providers.",
+            "confirm": true
+          },
+          {
+            "q": "How long does it take?",
+            "a": "It depends on the scope and how quickly the photos and texts are ready. You get an estimated timeline in the proposal.",
+            "confirm": true
+          },
+          {
+            "q": "Which languages can the site have?",
+            "a": "Slovenian and English as a base. We can add German, Italian or any other language your guests speak.",
+            "confirm": true
+          },
+          {
+            "q": "What if I want to change something later?",
+            "a": "I update texts, prices or photos for you. How and on what terms is set out in the proposal.",
+            "confirm": true
+          }
+        ]
+      },
+      "testimonials": {
+        "kicker": "Kind words",
+        "title": "What hosts say."
+      },
+      "contact": {
+        "kicker": "Contact",
+        "title": "Tell me about your place.",
+        "body": "Send me the name and location of your property and a link to your Booking.com or Airbnb listing, if you have one. I’ll prepare a free proposal — no obligation.",
+        "sign": "Matej",
+        "email": "Send an email",
+        "phone": "Call",
+        "whatsapp": "Message on WhatsApp",
+        "emailSubject": "Free proposal for my holiday rental website",
+        "emailBody": "Hello Matej,\n\nI’m interested in a website for my holiday rental.\n\nProperty name:\nLocation:\nBooking.com / Airbnb link (if any):\nCurrent website (if any):\n\nBest regards,\n",
+        "whatsappText": "Hello! I’m interested in a website for my holiday rental.",
+        "stamp": "SI",
+        "postmark": "Post · Več gostov",
+        "pending": "Contact details are placeholders for now."
+      },
+      "footer": {
+        "tagline": "Websites, Google Maps and direct inquiries for holiday apartments and homes in Slovenia.",
+        "studio": "Studio by {name}",
+        "sections": "On this page",
+        "contact": "Contact"
+      },
+      "notFound": {
+        "title": "This path leads nowhere.",
+        "body": "The page you’re looking for doesn’t exist. Maybe the link was wrong — or the page went on holiday.",
+        "home": "Back to the homepage",
+        "english": "Stran ne obstaja.",
+        "englishLink": "Slovenska stran"
+      },
+      "demo": {
+        "bar": "Demo · fictional property. An example of a site built by Več gostov.",
+        "back": "Back to Več gostov",
+        "nav": {
+          "about": "The place",
+          "gallery": "Gallery",
+          "area": "Nearby",
+          "inquiry": "Inquiry"
+        },
+        "ids": {
+          "about": "the-place",
+          "gallery": "gallery",
+          "area": "nearby",
+          "inquiry": "inquiry"
+        },
+        "checkDates": "Check availability",
+        "facts": {
+          "guests": {
+            "one": "{n} guest",
+            "other": "{n} guests"
+          },
+          "bedrooms": {
+            "one": "{n} bedroom",
+            "other": "{n} bedrooms"
+          }
+        },
+        "galleryTitle": "Take a look around",
+        "amenitiesTitle": "In the apartment",
+        "areaTitle": "Nearby",
+        "amenities": {
+          "wifi": "Wi-Fi",
+          "parking": "Free parking",
+          "kitchen": "Fully equipped kitchen",
+          "balcony": "Balcony with a view",
+          "washer": "Washing machine",
+          "bike": "Bike storage",
+          "garden": "Garden",
+          "grill": "Outdoor grill",
+          "pets": "Pets welcome",
+          "aircon": "Air conditioning",
+          "coffee": "Coffee machine",
+          "nocar": "Everything within walking distance"
+        },
+        "inquiryTitle": "Check availability",
+        "inquiryBody": "Choose your dates and send an inquiry. The host replies personally and confirms your stay.",
+        "form": {
+          "arrival": "Arrival",
+          "departure": "Departure",
+          "guests": "Guests",
+          "name": "Full name",
+          "email": "Email",
+          "message": "Message",
+          "submit": "Send inquiry",
+          "sampleArrival": "12 Jul",
+          "sampleDeparture": "16 Jul",
+          "sampleGuests": "2 adults",
+          "sampleMessage": "Is the apartment free on these dates?"
+        },
+        "mockNote": "Demo: this form is only a preview and doesn’t send anything. On your site, inquiries would come straight to you.",
+        "footerTitle": "Would you like a site like this for your place?",
+        "footerNote": "Fictional property. Photos and texts are examples.",
+        "items": {
+          "brin": {
+            "name": "Apartma Brin",
+            "place": "Bled · Julian Alps",
+            "greeting": "Greetings from Bled",
+            "tagline": "Morning coffee with a view of the lake and the mountains.",
+            "about": [
+              "A bright apartment with wood, linen and a balcony looking out at the mountains. The lake is a ten-minute walk away.",
+              "Made for couples and families who want peace and quiet but everything close by: a bakery, cycling routes and swimming in the lake."
+            ],
+            "area": [
+              {
+                "title": "The lake",
+                "distance": "10 min walk",
+                "body": "Swimming, boats and a walk around the lake."
+              },
+              {
+                "title": "Viewpoints",
+                "distance": "20 min walk",
+                "body": "Short hikes to views over the valley."
+              },
+              {
+                "title": "Cycling",
+                "distance": "on the doorstep",
+                "body": "Routes for every age and fitness level."
+              }
+            ]
+          },
+          "smaragd": {
+            "name": "Hiša Smaragd",
+            "place": "Soča Valley",
+            "greeting": "Greetings from the Soča Valley",
+            "tagline": "A house by the river where the water really is that green.",
+            "about": [
+              "A stone house with a garden, just a few steps from the river. For families and friends who come for the river, the hikes or simply the quiet.",
+              "Evenings by the grill in the garden, mornings with coffee and the sound of the water."
+            ],
+            "area": [
+              {
+                "title": "The river",
+                "distance": "2 min walk",
+                "body": "Swimming and resting by crystal-clear water."
+              },
+              {
+                "title": "On the water",
+                "distance": "10 min drive",
+                "body": "Rafting and kayaking with local guides."
+              },
+              {
+                "title": "Hiking",
+                "distance": "on the doorstep",
+                "body": "Trails to waterfalls and views over the valley."
+              }
+            ]
+          },
+          "sol": {
+            "name": "Studio Sol",
+            "place": "Piran · Slovenian coast",
+            "greeting": "Greetings from Piran",
+            "tagline": "A small studio, a lot of sea.",
+            "about": [
+              "A renovated studio in the old town, with a balcony that looks out to the sea.",
+              "For two who want a holiday without a car: the sea, fish restaurants and sunset on the square are all a few minutes away."
+            ],
+            "area": [
+              {
+                "title": "The sea",
+                "distance": "3 min walk",
+                "body": "Swimming off the pier and walks along the shore."
+              },
+              {
+                "title": "Main square",
+                "distance": "5 min walk",
+                "body": "Cafés, ice cream and the sunset."
+              },
+              {
+                "title": "Salt pans",
+                "distance": "15 min drive",
+                "body": "Salt fields and a cycle path by the sea."
+              }
+            ]
+          }
+        }
+      },
+      "alt": {
+        "hero": "Bright apartment living room in morning sun, with linen curtains and a light wooden floor.",
+        "lake": "Alpine lake with mountains in the background.",
+        "alpine-balcony": "Balcony with a small table, two cups of coffee and a view of the mountains.",
+        "alpine-bedroom": "Bedroom with a wooden headboard, linen bedding and a window with a mountain view.",
+        "soca-river": "Emerald-green river between forested slopes.",
+        "stone-house": "Stone holiday house with a garden below the mountains.",
+        "river-room": "Warm living room with wooden details and a window facing the forest.",
+        "coast-town": "Seaside old town with a bell tower at sunset.",
+        "sea-studio": "Bright studio with a window looking out to the sea.",
+        "sea-balcony": "Small balcony with a view of the sea."
+      },
+      "styleTile": {
+        "title": "Style tile",
+        "intro": "The visual direction for Več gostov: morning sun, light wood, linen, river blue and alpine green. Motif: the postcard.",
+        "palette": "Colour",
+        "type": "Typography",
+        "buttons": "Buttons and links",
+        "card": "Service card",
+        "image": "Photo as a postcard",
+        "headingSample": "More guests who book directly.",
+        "bodySample": "A beautiful website of your own, a place on Google Maps and an easy way to ask for dates.",
+        "linkSample": "Text link"
+      }
+    }
+  }
+}
