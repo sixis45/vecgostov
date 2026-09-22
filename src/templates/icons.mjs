@@ -1,0 +1,45 @@
+// Line icons (24 × 24, stroke = currentColor). Drawn for this site.
+const P = {
+  check: '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
+  arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+  'arrow-left': '<path d="M19 12H5M11 6l-6 6 6 6"/>',
+  percent: '<path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/>',
+  search: '<circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/>',
+  phone: '<rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/>',
+  rules: '<path d="M12 4v16.5M8.5 20.5h7M5 7h14"/><path d="M5 7l-2.8 6.2a3 3 0 005.6 0L5 7zM19 7l-2.8 6.2a3 3 0 005.6 0L19 7z"/>',
+  site: '<rect x="2.5" y="4" width="19" height="16" rx="2.5"/><path d="M2.5 8.5h19M5.6 6.25h.01M8.2 6.25h.01M6 12.5h6M6 15.5h4"/><rect x="14.5" y="11.5" width="4" height="5" rx="1"/>',
+  pin: '<path d="M12 21.5s-7-6.2-7-11.5a7 7 0 0114 0c0 5.3-7 11.5-7 11.5z"/><circle cx="12" cy="10" r="2.5"/>',
+  calendar: '<rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4M8.5 14.5l2 2 4-4"/>',
+  camera: '<path d="M3.5 8.5a2 2 0 012-2h2.3l1.4-2h5.6l1.4 2h2.3a2 2 0 012 2v9.5a2 2 0 01-2 2h-13a2 2 0 01-2-2z"/><circle cx="12" cy="13" r="3.8"/>',
+  tour: '<path d="M20.5 12a8.5 8.5 0 11-2.5-6"/><path d="M20.5 3.5v4h-4"/><path d="M3.5 12c0 1.7 3.8 3 8.5 3s8.5-1.3 8.5-3"/><circle cx="12" cy="12" r="1.2"/>',
+  mail: '<rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/>',
+  call: '<path d="M5 4h3.5l1.8 4.5-2.3 1.5a11 11 0 006 6l1.5-2.3 4.5 1.8V19a1.5 1.5 0 01-1.5 1.5A16 16 0 013.5 5.5 1.5 1.5 0 015 4z"/>',
+  chat: '<path d="M20.5 11.5a8.5 8.5 0 01-12.4 7.6L3.5 20.5l1.4-4.4A8.5 8.5 0 1120.5 11.5z"/><path d="M8.5 10.5h7M8.5 13.5h4"/>',
+  wifi: '<path d="M2.5 9a14 14 0 0119 0M5.5 12.5a9.5 9.5 0 0113 0M8.8 16a5 5 0 016.4 0M12 19.5h.01"/>',
+  parking: '<rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M9.5 17V7.5h3.5a3 3 0 010 6H9.5"/>',
+  kitchen: '<path d="M4 10h16v6.5a3.5 3.5 0 01-3.5 3.5h-9A3.5 3.5 0 014 16.5z"/><path d="M2 10h2M20 10h2M9 7c0-1 1-1.5 1-3M14 7c0-1 1-1.5 1-3"/>',
+  balcony: '<path d="M3 20.5h18M3.5 17l5-7 3.5 4.5 2.5-3 6 5.5"/><circle cx="17" cy="6.5" r="2"/>',
+  washer: '<rect x="4" y="2.5" width="16" height="19" rx="2.5"/><circle cx="12" cy="13.5" r="4.5"/><path d="M7.5 6h.01M10.5 6h.01"/>',
+  bike: '<circle cx="5.5" cy="16.5" r="3.5"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="M5.5 16.5l4-7h6l3 7M9.5 9.5l3 7h-7M14 6.5h2.5"/>',
+  garden: '<path d="M12 21v-9M12 12c0-4 3-6.5 7.5-6.5 0 4.5-3 6.5-7.5 6.5zM12 14.5C12 11 9.5 9 5 9c0 3.8 2.5 5.5 7 5.5z"/>',
+  grill: '<path d="M4 9.5h16a8 8 0 01-16 0zM8 17l-2 4M16 17l2 4M12 17.5V21M9 3.5c0 1.2-1 1.8-1 3M13 3.5c0 1.2-1 1.8-1 3M17 3.5c0 1.2-1 1.8-1 3"/>',
+  pets: '<circle cx="6" cy="10" r="1.8"/><circle cx="9.5" cy="5.8" r="1.8"/><circle cx="14.5" cy="5.8" r="1.8"/><circle cx="18" cy="10" r="1.8"/><path d="M12 11.5c-2.8 0-5.5 3.8-5.5 6 0 1.8 1.3 2.5 2.8 2.5 1.2 0 1.7-.6 2.7-.6s1.5.6 2.7.6c1.5 0 2.8-.7 2.8-2.5 0-2.2-2.7-6-5.5-6z"/>',
+  aircon: '<path d="M12 2.5v19M3.8 7.25l16.4 9.5M3.8 16.75l16.4-9.5M9.5 4l2.5 2 2.5-2M9.5 20l2.5-2 2.5 2"/>',
+  coffee: '<path d="M4.5 9h12v5.5a5 5 0 01-5 5h-2a5 5 0 01-5-5z"/><path d="M16.5 10.5h1.5a2.5 2.5 0 010 5h-1.8M8 3.5c0 1.5-1 1.5-1 3M12 3.5c0 1.5-1 1.5-1 3"/>',
+  nocar: '<circle cx="13" cy="4.5" r="2"/><path d="M9 21l2.5-6.5 3 3V21M11.5 14.5l1-5 3.5 3 2.5.5M12.5 9.5L9 11l-1 3"/>',
+  users: '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0113 0M15.5 4.8a3.5 3.5 0 010 6.4M18 14.2a6.5 6.5 0 013.5 5.8"/>',
+  bed: '<path d="M3 19V6M3 15h18v4M21 15v-3.5a3 3 0 00-3-3h-7v6.5"/><circle cx="7" cy="11" r="2"/>',
+  size: '<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>',
+  menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
+  close: '<path d="M6 6l12 12M18 6L6 18"/>',
+  info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.5h.01"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/>',
+  external: '<path d="M14 4h6v6M20 4l-9 9M18 14v4.5A1.5 1.5 0 0116.5 20h-11A1.5 1.5 0 014 18.5v-11A1.5 1.5 0 015.5 6H10"/>',
+  globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.5 5.7 3.5 9s-1 6.3-3.5 9c-2.5-2.7-3.5-5.7-3.5-9s1-6.3 3.5-9z"/>',
+};
+
+export function icon(name, cls = '') {
+  if (!P[name]) throw new Error(`Unknown icon: ${name}`);
+  return `<svg class="icon icon--${name}${cls ? ' ' + cls : ''}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${P[name]}</svg>`;
+}
