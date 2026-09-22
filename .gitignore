@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Build output (Cloudflare Pages builds this itself)
+dist/
+
+# Cloudflare / Wrangler local state
+.wrangler/
+.dev.vars
+
+# Environment files
+.env
+.env.*
+
+# Original high-resolution photos (keep them outside git; commit only
+# the optimized versions that `npm run images` writes to src/assets/img/)
+photos/originals/*
+!photos/originals/.gitkeep
+
+# Local QA output
+.qa/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
