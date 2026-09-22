@@ -181,7 +181,7 @@ for (const p of pages) console.log(`  ${p.url.padEnd(28)} ${kb(p.bytes)}`);
 const illustrated = Object.entries(site.images).filter(([k, v]) => !k.startsWith('_') && v.placeholder).map(([k]) => k);
 const todo = [
   report.placeholders.size && `Placeholders to replace in content/site.json: ${[...report.placeholders].join(', ')}`,
-  report.drafts.size && `FAQ answers marked "confirm": ${report.drafts.size}`,
+  report.drafts.size && `FAQ answers still marked "confirm" (shown with a Draft tag): ${site.i18n[defaultLocale].faq.items.filter((i) => i.confirm).length} per language`,
   illustrated.length && `Illustrated stand-ins (swap for photos when you have them): ${illustrated.join(', ')}`,
   !domain && 'site.domain is empty — canonical, hreflang, og:url and sitemap.xml are off until you set it.',
 ].filter(Boolean);
