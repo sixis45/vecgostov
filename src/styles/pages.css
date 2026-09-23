@@ -1,0 +1,63 @@
+/* ==========================================================================
+   404 page and style tile.
+   ========================================================================== */
+
+/* ---- 404 ------------------------------------------------------------------ */
+.nf { min-height: 100svh; display: grid; grid-template-rows: 1fr auto; background: var(--linen); }
+.nf__in { display: grid; align-content: center; justify-items: start; gap: var(--space-xl); padding-block: var(--space-xl); }
+.nf .wordmark { font-size: 1.7rem; }
+.nf__card { position: relative; display: grid; gap: var(--space-s); max-width: 38rem; padding: clamp(1.5rem, 1rem + 2.4vw, 3rem); transform: rotate(-0.8deg); }
+.nf__card h1 { font-size: var(--step-4); }
+.nf__card > p:not(.kicker) { color: var(--ink-soft); font-size: var(--step-1); }
+.nf__card .btn { margin-top: var(--space-2xs); }
+.nf__other { font-size: var(--step--1) !important; }
+.nf__marks { position: absolute; top: -2rem; right: 1rem; display: flex; align-items: center; }
+.nf__marks .postmark { margin-right: -0.7rem; }
+.nf__stamp .stamp { width: 4rem; height: 4.8rem; }
+.nf__stamp .stamp__face { --stamp-bg: var(--sun); --stamp-ink: var(--ink); font-size: 1.2rem; }
+.nf__stamp { transform: rotate(6deg); }
+.nf .landscape { margin-top: 0; }
+.nf .landscape + * { display: none; }
+
+/* ---- Style tile ------------------------------------------------------------ */
+.tile { padding-block: var(--space-2xl) var(--space-3xl); }
+.tile__head { display: grid; gap: var(--space-s); max-width: 44rem; margin-bottom: var(--space-2xl); }
+.tile__brand { font-size: clamp(3rem, 2rem + 5vw, 5.5rem) !important; min-height: 0 !important; }
+.tile__intro { font-size: var(--step-1); color: var(--ink-soft); }
+.tile__grid { display: grid; gap: var(--space-l); }
+@media (min-width: 62em) {
+  .tile__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tile__block--palette, .tile__block--image { grid-column: span 2; }
+}
+.tile__block { display: grid; gap: var(--space-m); align-content: start; padding: var(--space-l); border-radius: var(--radius-l); background: var(--paper); border: 1px solid var(--line); }
+.tile__label { font-family: var(--font-body); font-size: var(--step--1); font-weight: 650; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
+.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); gap: var(--space-m); }
+.swatches li { display: grid; gap: 0.5rem; }
+.swatches b { display: block; }
+.swatches code { font-size: 0.78rem; color: var(--ink-soft); }
+.swatch { display: block; height: 5rem; border-radius: var(--radius-m); border: 1px solid rgb(42 36 32 / 0.12); }
+.swatch--linen { background: var(--linen); }
+.swatch--paper { background: var(--paper); }
+.swatch--sand { background: var(--sand); }
+.swatch--ink { background: var(--ink); }
+.swatch--ink-soft { background: var(--ink-soft); }
+.swatch--terra { background: var(--terra); }
+.swatch--sun { background: var(--sun); }
+.swatch--river { background: var(--river); }
+.swatch--alpine { background: var(--alpine); }
+.tile__display { font-family: var(--font-display); font-size: var(--step-4); line-height: 1.05; letter-spacing: -0.025em; }
+.tile__display em { color: var(--terra); }
+.tile__body { font-size: var(--step-1); color: var(--ink-soft); }
+.tile__meta { font-size: 0.8rem; color: var(--ink-soft); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.tile__buttons { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-s); }
+.tile__block--image { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 48em) { .tile__block--image { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); align-items: center; } .tile__block--image .tile__label { grid-column: 1 / -1; } }
+.tile__photo { position: relative; transform: rotate(-2deg); max-width: 32rem; }
+.tile__photo .pic { aspect-ratio: 4 / 3; }
+.tile__photo figcaption { position: absolute; left: 1.4rem; bottom: 1.4rem; color: #fff; font-family: var(--font-display); font-size: var(--step-2); font-style: italic; text-shadow: 0 1px 12px rgb(0 0 0 / 0.45); }
+.tile__photo .hero__front-stamp { position: absolute; top: -1.1rem; right: -0.9rem; transform: rotate(8deg); }
+.tile__photo .hero__front-stamp .stamp { width: 3rem; height: 3.6rem; }
+.tile__marks { display: flex; flex-wrap: wrap; gap: var(--space-l); align-items: center; }
+.tile__marks .stamp { width: 3.6rem; height: 4.3rem; }
+.tile__marks .stamp__face { --stamp-bg: var(--sun); --stamp-ink: var(--ink); font-size: 0.8rem; font-family: var(--font-body); font-weight: 750; text-transform: uppercase; }
+.tile__marks .stamp__face .icon { width: 1.8rem; height: 1.8rem; }

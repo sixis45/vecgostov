@@ -1,0 +1,13 @@
+# Cloudflare Pages redirects. Slovenian is the default language at /.
+# The visitor chooses the language with the switch; there is no automatic
+# redirect based on browser language.
+
+# /sl/ is not a real path — the Slovenian site lives at the root.
+/sl      /       301
+/sl/*    /:splat 301
+
+# Friendly aliases for the English examples.
+/examples/*      /en/examples/:splat  301
+/en/primeri/*    /en/examples/:splat  301
+
+# (Cloudflare already redirects /index.html → / and /en → /en/ on its own.)
