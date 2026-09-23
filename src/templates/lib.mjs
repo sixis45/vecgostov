@@ -42,16 +42,24 @@ export function money(ctx, amount) {
 }
 
 // ---- Contact links ----------------------------------------------------------
+/**
+ * mailto/tel/wa.me URLs. A detail that is still a placeholder gets `null`, so
+ * a live site never sends a visitor to example.com or a made-up number.
+ */
 export function contactLinks(ctx, { subject, body } = {}) {
   const c = ctx.site.contact;
   const s = subject ?? ctx.t.contact.emailSubject;
   const b = body ?? ctx.t.contact.emailBody;
+  const real = (key, url) => (isPlaceholder(c[key]) ? null : url);
   return {
-    email: `mailto:${c.email}?subject=${encodeURIComponent(s)}&body=${encodeURIComponent(b)}`,
-    phone: `tel:${digits(c.phone)}`,
-    whatsapp: `https://wa.me/${digits(c.whatsapp).replace(/^\+/, '')}?text=${encodeURIComponent(ctx.t.contact.whatsappText)}`,
+    email: real('email', `mailto:${c.email}?subject=${encodeURIComponent(s)}&body=${encodeURIComponent(b)}`),
+    phone: real('phone', `tel:${digits(c.phone)}`),
+    whatsapp: real('whatsapp', `https://wa.me/${digits(c.whatsapp).replace(/^\+/, '')}?text=${encodeURIComponent(ctx.t.contact.whatsappText)}`),
   };
 }
+
+/** A link when `href` is set, otherwise the same content as plain text. */
+export const linkOrText = (href, inner, extra = '') => (href ? `<a href="${esc(href)}"${extra}>${inner}</a>` : `<span class="is-pending">${inner}</span>`);
 
 // ---- Images -----------------------------------------------------------------
 /**
@@ -174,9 +182,9 @@ export function footer(ctx, { home = true } = {}) {
       <div>
         <h2 class="ftr__title">${esc(t.footer.contact)}</h2>
         <ul class="ftr__list">
-          <li><a href="${esc(links.email)}">${icon('mail')}${value(ctx, site.contact.email, { tag: false })}</a></li>
-          <li><a href="${esc(links.phone)}">${icon('call')}${value(ctx, site.contact.phone, { tag: false })}</a></li>
-          <li><a href="${esc(links.whatsapp)}" target="_blank" rel="noopener">${icon('chat')}WhatsApp<span class="sr-only"> (${esc(t.ui.external)})</span></a></li>
+          <li>${linkOrText(links.email, `${icon('mail')}${value(ctx, site.contact.email, { tag: false })}`)}</li>
+          <li>${linkOrText(links.phone, `${icon('call')}${value(ctx, site.contact.phone, { tag: false })}`)}</li>
+          <li>${linkOrText(links.whatsapp, `${icon('chat')}WhatsApp${links.whatsapp ? `<span class="sr-only"> (${esc(t.ui.external)})</span>` : ''}`, ' target="_blank" rel="noopener"')}</li>
         </ul>
       </div>
     </div>

@@ -505,7 +505,7 @@ body.has-fixed-header { padding-top: calc(var(--header-h) + env(safe-area-inset-
   text-transform: uppercase;
 }
 .ftr__list { display: grid; gap: 0.15rem; list-style: none; margin: 0; padding: 0; }
-.ftr__list a { display: inline-flex; align-items: center; gap: 0.5em; min-height: var(--tap); }
+.ftr__list a, .ftr__list .is-pending { display: inline-flex; align-items: center; gap: 0.5em; min-height: var(--tap); }
 .ftr .lang { background: transparent; border-color: rgb(253 250 244 / 0.25); margin-top: var(--space-s); }
 .ftr .lang a { color: #e7ebe2; }
 .ftr .lang a:hover { background: rgb(253 250 244 / 0.12); color: #fff; }

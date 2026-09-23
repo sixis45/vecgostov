@@ -35,7 +35,7 @@ Quick version:
 - **Copy:** `i18n.sl.*` (Slovenian) and `i18n.en.*` (English), one block per language
 - **Brand name:** `BRAND_NAME`
 
-Until a placeholder (`€XXX`, `example.com`, `00 000 000`) is replaced, the page shows it with a dashed outline and a "Začasno / Placeholder" tag, and every build lists what is still missing.
+Until a placeholder (`€XXX`, `example.com`, `00 000 000`) is replaced, the page shows it with a dashed outline and a "Začasno / Placeholder" tag, and every build lists what is still missing. A contact detail that is still a placeholder is shown as plain text, not a link, and the package buttons scroll to the contact section instead of opening e-mail; real `mailto:`, `tel:` and WhatsApp links appear as soon as the real value is in.
 
 ## Photos
 

@@ -260,7 +260,7 @@ function pricing(ctx) {
           <ul class="ticks" role="list">
             ${pkg.features.map((f) => `<li>${icon('check')}<span>${esc(f)}</span></li>`).join('\n            ')}
           </ul>
-          <a class="btn ${pkg.featured ? 'btn--sun' : 'btn--ghost'} btn--block" href="${esc(links.email)}">${esc(p.cta)}${icon('arrow', 'icon--arrow')}</a>
+          <a class="btn ${pkg.featured ? 'btn--sun' : 'btn--ghost'} btn--block" href="${esc(links.email ?? `#${t.ids.contact}`)}">${esc(p.cta)}${icon('arrow', 'icon--arrow')}</a>
         </div>
       </article>`;
       }).join('\n      ')}
@@ -282,7 +282,7 @@ function faq(ctx) {
         <p class="kicker">${esc(f.kicker)}</p>
         <h2 id="faq-title">${esc(f.title)}</h2>
       </header>
-      <p class="faq__aside">${esc(f.aside)} <a class="link-arrow" href="${esc(links.email)}">${esc(f.asideLink)}${icon('arrow')}</a></p>
+      <p class="faq__aside">${esc(f.aside)} <a class="link-arrow" href="${esc(links.email ?? `#${t.ids.contact}`)}">${esc(f.asideLink)}${icon('arrow')}</a></p>
     </div>
     <div class="faq__list" data-reveal>
       ${f.items.map((item) => {
@@ -316,11 +316,18 @@ function contact(ctx) {
   const c = t.contact;
   const links = contactLinks(ctx);
   const pending = ['email', 'phone', 'whatsapp'].some((k) => isPlaceholder(site.contact[k]));
-  const line = (key, ic, label, shown, extra = '') => `<li><a class="line-btn" href="${esc(links[key])}"${extra}>
-            <span class="line-btn__icon">${icon(ic)}</span>
-            <span class="line-btn__text"><span class="line-btn__label">${esc(label)}</span><span class="line-btn__value">${value(ctx, shown, { tag: false })}</span></span>
+  const line = (key, ic, label, shown, extra = '') => {
+    const inner = `<span class="line-btn__icon">${icon(ic)}</span>
+            <span class="line-btn__text"><span class="line-btn__label">${esc(label)}</span><span class="line-btn__value">${value(ctx, shown, { tag: false })}</span></span>`;
+    return links[key]
+      ? `<li><a class="line-btn" href="${esc(links[key])}"${extra}>
+            ${inner}
             ${icon('arrow', 'line-btn__arrow')}
-          </a></li>`;
+          </a></li>`
+      : `<li><span class="line-btn line-btn--pending">
+            ${inner}
+          </span></li>`;
+  };
   return `<section class="section contact" id="${t.ids.contact}" data-key="contact" aria-labelledby="contact-title">
   <div class="wrap">
     <div class="postcard letter" data-reveal>

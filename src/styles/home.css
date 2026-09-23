@@ -635,6 +635,8 @@
 }
 .letter__lines li:first-child .line-btn { border-top: 1.5px solid var(--line); }
 .line-btn:hover { color: var(--ink); background: var(--linen); padding-left: var(--space-s); }
+.line-btn--pending:hover { background: none; padding-left: var(--space-2xs); }
+.line-btn--pending .line-btn__icon { opacity: 0.55; }
 .line-btn__icon {
   display: grid;
   place-items: center;

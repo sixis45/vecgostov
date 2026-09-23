@@ -51,7 +51,7 @@ The demos are fictional properties. Every demo page has a honey "Demo · izmišl
 | Domain | `site.domain` | empty (see DEPLOY.md, section 4) |
 | Testimonials | `testimonials` | empty and switched off on purpose |
 
-Placeholders are shown on the page with a dashed outline and a "Začasno / Placeholder" tag, so none can go live unnoticed. Every build prints what is still missing.
+Placeholders are shown on the page with a dashed outline and a "Začasno / Placeholder" tag, so none can go live unnoticed. Every build prints what is still missing. Placeholder contact details are never linked (no `mailto:` to example.com, no dialling a made-up number): they render as plain text, and the package and FAQ buttons point to the contact section until a real e-mail is set.
 
 ## Assumptions
 
