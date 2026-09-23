@@ -43,6 +43,11 @@ After that:
 - Push any other branch or open a pull request → a preview URL like `https://<branch>.vecgostov.pages.dev`.
 - `dist/_headers` (security headers, CSP, caching), `dist/_redirects` and `dist/404.html` are picked up automatically.
 
+### If a build uses an old commit or nothing deploys
+
+- **Banner "This project is disconnected from your Git account"**: GitHub isn't allowed to notify Cloudflare about this repository. On GitHub open **Settings → Applications → Installed GitHub Apps → Cloudflare Workers and Pages → Configure**, and under **Repository access** add `vecgostov` (or choose All repositories). Refresh the Pages project; the banner disappears.
+- **"Retry deployment" rebuilds the same commit**, not the newest one. To build the latest `main`, push a new commit to `main` (merging a pull request counts).
+
 ### Fallback: manual deploy with Wrangler
 
 Only if Git integration isn't an option:
