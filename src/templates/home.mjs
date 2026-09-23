@@ -47,7 +47,7 @@ function hero(ctx) {
         <p class="hero__note">${icon('check')}${esc(h.note)}</p>
       </div>
       <div class="hero__addr">
-        <div class="hero__marks">${postmark(h.postcard.postmark)}${stamp(icon('sun'), { cls: 'hero__stamp' })}</div>
+        <div class="hero__marks">${stamp(icon('sun'), { cls: 'hero__stamp' })}</div>
         <p class="hero__addr-title">${esc(h.postcard.title)}</p>
         <ul class="hero__addr-list" role="list">
           ${h.postcard.items.map((i) => `<li>${icon('check')}<span>${esc(i)}</span></li>`).join('\n          ')}
