@@ -1,6 +1,6 @@
 # Production note
 
-Built 22 September 2026. Nothing is deployed publicly: the code is on GitHub (`sixis45/vecgostov`, branch `claude/cool-darwin-4khc2j`) and ready for Cloudflare Pages (see [DEPLOY.md](DEPLOY.md)).
+Built 22 September 2026. Since 23 September 2026 the Cloudflare Pages project `vecgostov` is connected to this repository (Git integration): every push to `main` publishes to https://vecgostov.pages.dev, and every other branch gets a preview URL (see [DEPLOY.md](DEPLOY.md)). No custom domain yet.
 
 ## Design direction
 
