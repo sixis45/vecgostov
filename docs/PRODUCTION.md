@@ -1,6 +1,6 @@
 # Production note
 
-Built 22 September 2026. Since 23 September 2026 the Cloudflare Pages project `vecgostov` is connected to this repository (Git integration): every push to `main` publishes to https://vecgostov.pages.dev, and every other branch gets a preview URL (see [DEPLOY.md](DEPLOY.md)). No custom domain yet.
+Built 22 September 2026. Since 23 September 2026 the Cloudflare Pages project `vecgostov` is connected to this repository (Git integration): every push to `main` publishes to https://vecgostov.pages.dev, and every other branch gets a preview URL (see [DEPLOY.md](DEPLOY.md)). Custom domain: **https://vecgostov.com** (bought at Cloudflare; `vecgostov.com` and `www.vecgostov.com` are CNAMEs to `vecgostov.pages.dev`, proxied).
 
 ## Design direction
 
@@ -48,7 +48,7 @@ The demos are fictional properties. Every demo page has a honey "Demo · izmišl
 | Package contents | `i18n.*.pricing.packages[].features` | drafted from the brief, please confirm |
 | FAQ answers | `i18n.*.faq.items[]` with `"confirm": true` (5 of 7) | drafted, shown with a "Draft" tag |
 | Calculator starting values | `calculator` | 80 €/night, 120 nights, 15 % commission, 20 % direct. Example numbers visitors change; adjust if you prefer others |
-| Domain | `site.domain` | empty (see DEPLOY.md, section 4) |
+| Domain | `site.domain` | done: `https://vecgostov.com` |
 | Testimonials | `testimonials` | empty and switched off on purpose |
 
 Placeholders are shown on the page with a dashed outline and a "Začasno / Placeholder" tag, so none can go live unnoticed. Every build prints what is still missing. Placeholder contact details are never linked (no `mailto:` to example.com, no dialling a made-up number): they render as plain text, and the package and FAQ buttons point to the contact section until a real e-mail is set.
@@ -103,7 +103,7 @@ First screen on a phone: HTML with all critical CSS inlined 15.7 KB (Brotli), he
 
 - **Eight illustrated stand-ins.** Real photos will sell the demos better. Each entry in `content/site.json` says what photo would replace it.
 - **Browsers:** tested in Chromium only. Safari (iOS/macOS) and Firefox were not tested; there are no real-device tests either. The CSS uses widely supported features (`svh`, `text-wrap: balance`, CSS masks for the stamp edge); where one is missing, the stamp shows without its perforated edge and headings wrap normally.
-- **Social previews** use a relative `og:image` URL until `site.domain` is set; most platforms need the absolute one (set automatically once the domain is in).
+- **Social previews** use absolute `https://vecgostov.com/…` URLs now that `site.domain` is set; check one share (e.g. in WhatsApp) once the domain is live.
 - **The claude.ai preview link** was a convenience build of the same pages. Contact links and some page-to-page navigation may not work inside that frame; the real test is `vecgostov.pages.dev`.
 - **Unsplash licences** could not be re-verified from this environment (see above).
 - The social images in `src/assets/og/` are regenerated with an optional script (`scripts/og.mjs`, needs Playwright) when the headline or hero photo changes.

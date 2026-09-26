@@ -3,7 +3,7 @@
   "BRAND_NAME": "Več gostov",
   "site": {
     "_domain": "Leave empty until the real domain is known, e.g. \"https://apartmaji.matejdoljak.com\" (no trailing slash). Filling it in turns on canonical, hreflang, og:url, sitemap.xml and the Sitemap line in robots.txt.",
-    "domain": "",
+    "domain": "https://vecgostov.com",
     "locales": ["sl", "en"],
     "defaultLocale": "sl",
     "studio": {
