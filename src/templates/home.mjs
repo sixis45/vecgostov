@@ -106,18 +106,20 @@ function why(ctx) {
   const w = t.why;
   return `<section class="section why" id="${t.ids.why}" data-key="why" aria-labelledby="why-title">
   <div class="wrap">
-    <header class="head" data-reveal>
-      <p class="kicker">${esc(w.kicker)}</p>
-      <h2 id="why-title">${esc(w.title)}</h2>
-      <p>${esc(w.body)}</p>
-    </header>
     <div class="why__grid">
-      <ul class="why__points" role="list">
-        ${w.points.map((p) => `<li class="why__point" data-reveal>
-          <span class="why__icon">${icon(p.icon)}</span>
-          <div><h3>${esc(p.title)}</h3><p>${esc(p.body)}</p></div>
-        </li>`).join('\n        ')}
-      </ul>
+      <div class="why__main">
+        <header class="head" data-reveal>
+          <p class="kicker">${esc(w.kicker)}</p>
+          <h2 id="why-title">${esc(w.title)}</h2>
+          <p>${esc(w.body)}</p>
+        </header>
+        <ul class="why__points" role="list">
+          ${w.points.map((p) => `<li class="why__point" data-reveal>
+            <span class="why__icon">${icon(p.icon)}</span>
+            <div><h3>${esc(p.title)}</h3><p>${esc(p.body)}</p></div>
+          </li>`).join('\n          ')}
+        </ul>
+      </div>
       <div class="why__calc" data-reveal>
         ${calculator(ctx)}
       </div>
