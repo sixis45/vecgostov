@@ -19,7 +19,8 @@ export const isPlaceholder = (value) => /XXX|example\.com|00 000 000|\[\[/.test(
 export function value(ctx, text, { tag = true } = {}) {
   if (!isPlaceholder(text)) return esc(text);
   ctx.report.placeholders.add(String(text));
-  return `<span class="ph">${esc(text)}</span>${tag ? `<span class="ph-tag">${esc(ctx.t.ui.placeholder)}</span>` : ''}`;
+  const shown = String(text).replace(/\[\[|\]\]/g, ''); // [[…]] marks a placeholder; show it without the brackets
+  return `<span class="ph">${esc(shown)}</span>${tag ? `<span class="ph-tag">${esc(ctx.t.ui.placeholder)}</span>` : ''}`;
 }
 
 export const digits = (phone) => String(phone).replace(/[^\d+]/g, '');
@@ -146,6 +147,32 @@ ${body}
 `;
 }
 
+// Site header with the main navigation. On the landing page the links are
+// in-page anchors; on other pages they point back to the landing page.
+export function siteHeader(ctx, { onHome = true } = {}) {
+  const { t, site } = ctx;
+  const to = (key) => `${onHome ? '' : ctx.homeUrl}#${t.ids[key]}`;
+  return `<a class="skip" href="#main">${esc(t.ui.skip)}</a>
+<header class="hdr" data-header>
+  <div class="wrap hdr__in">
+    <a class="wordmark" href="${ctx.homeUrl}" aria-label="${esc(t.ui.home)}">${wordmark(site.BRAND_NAME)}</a>
+    <nav class="nav" id="nav" aria-label="${esc(t.ui.navLabel)}">
+      <ul class="nav__list" role="list">
+        ${t.nav.map((n) => `<li><a href="${to(n.key)}">${esc(n.label)}</a></li>`).join('\n        ')}
+      </ul>
+      <div class="nav__extra">
+        ${langSwitch(ctx)}
+        <a class="btn btn--primary" href="${to('contact')}">${esc(t.cta.short)}</a>
+      </div>
+    </nav>
+    <div class="hdr__lang">${langSwitch(ctx)}</div>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" data-menu-button data-label-open="${esc(t.ui.menuOpen)}" data-label-close="${esc(t.ui.menuClose)}">
+      <span class="sr-only" data-menu-label>${esc(t.ui.menuOpen)}</span>${icon('menu')}${icon('close')}
+    </button>
+  </div>
+</header>`;
+}
+
 export function footerLandscape() {
   // Layered ridges for the footer; the last layer matches the footer colour.
   return `<div class="landscape" aria-hidden="true">
@@ -190,6 +217,7 @@ export function footer(ctx, { home = true } = {}) {
     </div>
     <div class="ftr__bottom">
       <p>© ${year} ${esc(site.BRAND_NAME)}</p>
+      <p><a href="${t.paths.legal}">${esc(t.footer.legal)}</a></p>
       <p><a href="${esc(site.site.studio.url)}">${esc(fill(t.footer.studio, { name: site.site.studio.name }))}</a></p>
     </div>
   </div>

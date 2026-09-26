@@ -31,6 +31,7 @@ Built 22 September 2026. Since 23 September 2026 the Cloudflare Pages project `v
 | Demo: Apartma Brin (alpine, Lake Bled photo) | `/primeri/brin/`, `/en/examples/brin/` |
 | Demo: Hiša Smaragd (Soča valley) | `/primeri/smaragd/`, `/en/examples/smaragd/` |
 | Demo: Studio Sol (Piran) | `/primeri/sol/`, `/en/examples/sol/` |
+| Legal notice & privacy (SL / EN) | `/pravno/`, `/en/legal/` (linked from every footer) |
 | 404 (Slovenian, with an English line) | any unknown URL |
 | Style tile | `/style-tile/` (not indexed) |
 
@@ -48,6 +49,8 @@ The demos are fictional properties. Every demo page has a honey "Demo · izmišl
 | Package contents | `i18n.*.pricing.packages[].features` | drafted from the brief, please confirm |
 | FAQ answers | `i18n.*.faq.items[]` with `"confirm": true` (5 of 7) | drafted, shown with a "Draft" tag |
 | Calculator starting values | `calculator` | 80 €/night, 120 nights, 15 % commission, 20 % direct. Example numbers visitors change; adjust if you prefer others |
+| Company details (legally required) | `company.name`, `.address`, `.registrationNumber`, `.taxNumber`, `.vatId` | placeholders, shown on `/pravno/` |
+| Legal page text | `i18n.*.legal`, then `company.legalReviewed: true` | drafted to match how the site works, shown with a "Draft" note |
 | Domain | `site.domain` | done: `https://vecgostov.com` |
 | Testimonials | `testimonials` | empty and switched off on purpose |
 

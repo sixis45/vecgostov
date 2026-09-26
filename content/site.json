@@ -18,6 +18,17 @@
     "phone": "+386 00 000 000",
     "whatsapp": "+386 00 000 000"
   },
+  "company": {
+    "_note": "PLACEHOLDERS. Provider details that Slovenian law (ZEPT) requires on a business website; shown on the legal page (/pravno/, /en/legal/). Replace every [[…]]. vatId: your VAT ID (e.g. SI12345678), or \"\" (empty) if you are not registered for VAT. After checking the legal page text, set legalReviewed to true and legalUpdated to that date.",
+    "name": "[[Firma, npr. Ime Priimek s.p.]]",
+    "address": "[[Ulica in hišna številka, poštna številka in kraj]]",
+    "registrationNumber": "[[Matična številka]]",
+    "taxNumber": "[[Davčna številka]]",
+    "vatId": "[[ID za DDV, npr. SI12345678, ali prazno]]",
+    "responsiblePerson": "Matej Doljak",
+    "legalUpdated": "2026-09-26",
+    "legalReviewed": false
+  },
   "prices": {
     "_note": "PLACEHOLDERS. Write the price exactly as it should appear, e.g. \"€890\" or \"od €890\".",
     "start": "€XXX",
@@ -179,7 +190,8 @@
       "ogLocale": "sl_SI",
       "paths": {
         "home": "/",
-        "demos": "/primeri/"
+        "demos": "/primeri/",
+        "legal": "/pravno/"
       },
       "ids": {
         "why": "zakaj",
@@ -464,7 +476,8 @@
         "tagline": "Spletne strani, Google Maps in neposredna povpraševanja za apartmaje in počitniške hiše v Sloveniji.",
         "studio": "Ustvarja {name}",
         "sections": "Na strani",
-        "contact": "Kontakt"
+        "contact": "Kontakt",
+        "legal": "Pravno obvestilo in zasebnost"
       },
       "notFound": {
         "title": "Ta pot ne pelje nikamor.",
@@ -472,6 +485,82 @@
         "home": "Na začetno stran",
         "english": "Page not found.",
         "englishLink": "English homepage"
+      },
+      "legal": {
+        "meta": {
+          "title": "Pravno obvestilo in zasebnost — Več gostov",
+          "description": "Podatki o ponudniku storitev Več gostov in obvestilo o varstvu osebnih podatkov."
+        },
+        "kicker": "Pravno obvestilo",
+        "title": "Podatki o ponudniku in varstvo zasebnosti",
+        "intro": "Kdo stoji za Več gostov in kako ravnamo z osebnimi podatki, ko obiščete stran ali nam pišete.",
+        "draft": "To besedilo je osnutek in je še v pregledu.",
+        "ids": {
+          "company": "ponudnik",
+          "privacy": "zasebnost"
+        },
+        "company": {
+          "title": "Podatki o ponudniku",
+          "labels": {
+            "name": "Ponudnik",
+            "brand": "Znamka",
+            "address": "Naslov",
+            "registrationNumber": "Matična številka",
+            "taxNumber": "Davčna številka",
+            "vat": "DDV",
+            "email": "E-pošta",
+            "phone": "Telefon",
+            "responsiblePerson": "Odgovorna oseba"
+          },
+          "vatId": "ID za DDV: {id}",
+          "vatNone": "Ni zavezanec za DDV"
+        },
+        "privacy": {
+          "title": "Varstvo osebnih podatkov",
+          "sections": [
+            {
+              "title": "Upravljavec",
+              "body": [
+                "Upravljavec osebnih podatkov je zgoraj navedeni ponudnik. Za vsa vprašanja o vaših podatkih nam pišite na {email}."
+              ]
+            },
+            {
+              "title": "Brez piškotkov in sledenja",
+              "body": [
+                "Stran ne uporablja piškotkov, analitike ali oglasnih in drugih sledilnih orodij ter nima spletnih obrazcev. Pisave in slike so shranjene na našem strežniku, zato vaš brskalnik ob obisku ne kontaktira drugih ponudnikov."
+              ]
+            },
+            {
+              "title": "Ko nam pišete ali nas pokličete",
+              "body": [
+                "Ko nam pišete po e-pošti ali WhatsAppu ali nas pokličete, obdelujemo podatke, ki nam jih sami posredujete: ime, kontaktne podatke, vsebino sporočila in podatke o vaši nastanitvi. Uporabimo jih za odgovor, pripravo ponudbe in morebitno sodelovanje.",
+                "Pravna podlaga je izvedba ukrepov pred sklenitvijo pogodbe na vašo zahtevo oziroma izvajanje pogodbe (točka (b) prvega odstavka 6. člena Splošne uredbe o varstvu podatkov)."
+              ]
+            },
+            {
+              "title": "Koliko časa hranimo podatke",
+              "body": [
+                "Podatke hranimo, dokler jih potrebujemo za odgovor in sodelovanje. Povpraševanja, iz katerih ne nastane sodelovanje, izbrišemo najpozneje v 12 mesecih. Podatke iz pogodb in računov hranimo toliko časa, kot zahtevajo predpisi."
+              ]
+            },
+            {
+              "title": "Kdo še obdeluje podatke",
+              "body": [
+                "Stran gostuje pri družbi Cloudflare, Inc., ki za dostavo strani in zaščito pred zlorabami obdeluje tehnične podatke, kot je naslov IP. Sporočila po e-pošti potujejo prek našega ponudnika e-pošte, sporočila po WhatsAppu pa prek družbe WhatsApp (Meta).",
+                "Nekateri od teh ponudnikov podatke obdelujejo tudi zunaj Evropske unije. Prenos v tem primeru temelji na okviru EU–ZDA za zasebnost podatkov ali na standardnih pogodbenih klavzulah. Vaših podatkov ne prodajamo in jih ne uporabljamo za oglaševanje."
+              ]
+            },
+            {
+              "title": "Vaše pravice",
+              "body": [
+                "Kadar koli lahko zahtevate dostop do svojih podatkov, njihov popravek ali izbris, omejitev obdelave in prenos podatkov ter ugovarjate obdelavi. Pišite nam na {email}.",
+                "Če menite, da z vašimi podatki ne ravnamo pravilno, se lahko pritožite pri {authority}."
+              ]
+            }
+          ],
+          "authority": "Informacijskem pooblaščencu Republike Slovenije"
+        },
+        "updated": "Zadnja sprememba: {date}"
       },
       "demo": {
         "bar": "Demo · izmišljena nastanitev. Primer strani, ki jo izdela Več gostov.",
@@ -652,7 +741,8 @@
       "ogLocale": "en_GB",
       "paths": {
         "home": "/en/",
-        "demos": "/en/examples/"
+        "demos": "/en/examples/",
+        "legal": "/en/legal/"
       },
       "ids": {
         "why": "why",
@@ -937,7 +1027,8 @@
         "tagline": "Websites, Google Maps and direct inquiries for holiday apartments and homes in Slovenia.",
         "studio": "Studio by {name}",
         "sections": "On this page",
-        "contact": "Contact"
+        "contact": "Contact",
+        "legal": "Legal notice & privacy"
       },
       "notFound": {
         "title": "This path leads nowhere.",
@@ -945,6 +1036,82 @@
         "home": "Back to the homepage",
         "english": "Stran ne obstaja.",
         "englishLink": "Slovenska stran"
+      },
+      "legal": {
+        "meta": {
+          "title": "Legal notice & privacy — Več gostov",
+          "description": "Provider details for Več gostov and how we handle personal data."
+        },
+        "kicker": "Legal notice",
+        "title": "Provider details and privacy",
+        "intro": "Who is behind Več gostov and how we handle personal data when you visit the site or write to us.",
+        "draft": "This text is a draft and still under review.",
+        "ids": {
+          "company": "provider",
+          "privacy": "privacy"
+        },
+        "company": {
+          "title": "Provider details",
+          "labels": {
+            "name": "Provider",
+            "brand": "Brand",
+            "address": "Address",
+            "registrationNumber": "Registration number",
+            "taxNumber": "Tax number",
+            "vat": "VAT",
+            "email": "Email",
+            "phone": "Phone",
+            "responsiblePerson": "Responsible person"
+          },
+          "vatId": "VAT ID: {id}",
+          "vatNone": "Not registered for VAT"
+        },
+        "privacy": {
+          "title": "Privacy",
+          "sections": [
+            {
+              "title": "Controller",
+              "body": [
+                "The controller of your personal data is the provider named above. For any question about your data, write to {email}."
+              ]
+            },
+            {
+              "title": "No cookies, no tracking",
+              "body": [
+                "This site uses no cookies, analytics, advertising or other tracking tools, and has no web forms. Fonts and images are stored on our own server, so your browser does not contact any other providers when you visit."
+              ]
+            },
+            {
+              "title": "When you write or call",
+              "body": [
+                "When you email us, message us on WhatsApp or call, we process the information you choose to send: your name, contact details, the content of your message and details about your property. We use it to reply, to prepare a proposal and, if we work together, to deliver the work.",
+                "The legal basis is taking steps at your request before entering into a contract, and performing the contract (Article 6(1)(b) of the General Data Protection Regulation)."
+              ]
+            },
+            {
+              "title": "How long we keep data",
+              "body": [
+                "We keep data for as long as we need it to reply and to work together. Inquiries that do not lead to a project are deleted within 12 months at the latest. Contract and invoice data are kept for as long as the law requires."
+              ]
+            },
+            {
+              "title": "Who else processes data",
+              "body": [
+                "The site is hosted by Cloudflare, Inc., which processes technical data such as IP addresses to deliver the site and protect it from abuse. Emails pass through our email provider, and WhatsApp messages through WhatsApp (Meta).",
+                "Some of these providers also process data outside the European Union. In that case the transfer relies on the EU–US Data Privacy Framework or on standard contractual clauses. We do not sell your data or use it for advertising."
+              ]
+            },
+            {
+              "title": "Your rights",
+              "body": [
+                "You can ask at any time for access to your data, for it to be corrected or deleted, for processing to be restricted and for your data to be transferred, and you can object to processing. Write to {email}.",
+                "If you believe we are not handling your data correctly, you can lodge a complaint with the {authority}."
+              ]
+            }
+          ],
+          "authority": "Information Commissioner of the Republic of Slovenia"
+        },
+        "updated": "Last updated: {date}"
       },
       "demo": {
         "bar": "Demo · fictional property. An example of a site built by Več gostov.",

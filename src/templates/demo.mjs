@@ -127,7 +127,7 @@ export function renderDemo(ctx, demo) {
   <div class="wrap d-ftr__in">
     <div>
       <p class="d-ftr__title">${esc(T.footerTitle)}</p>
-      <p class="d-ftr__note">${esc(T.footerNote)}</p>
+      <p class="d-ftr__note">${esc(T.footerNote)} · <a href="${t.paths.legal}">${esc(t.footer.legal)}</a></p>
     </div>
     <div class="d-ftr__actions">
       <a class="btn btn--primary btn--lg" href="${ctx.homeUrl}#${t.ids.contact}">${esc(t.cta.primary)}${icon('arrow', 'icon--arrow')}</a>

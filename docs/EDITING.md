@@ -12,6 +12,7 @@ After an edit, run `npm run dev` (or `npm run build`). If the JSON has a typo (a
 | `site.domain` | Empty until the real domain is known (see docs/DEPLOY.md). |
 | `site.locales` | Languages that get built, e.g. `["sl", "en"]`. The first page (`/`) is `defaultLocale`. |
 | `contact` | E-mail, phone, WhatsApp number. Shared by both languages. |
+| `company` | Provider details for the legal page (name, address, registration and tax numbers, VAT). |
 | `prices` | Package prices, shared by both languages. |
 | `calculator` | Starting values of the commission calculator. |
 | `images` | Every photo: its source file, credit/licence, crop focus. |
@@ -34,6 +35,25 @@ Keys that start with `_` (`_note`, `_readme`) are comments for you; the site ign
 ```
 
 Use international format for phone and WhatsApp. The site builds the `mailto:` (with a prefilled subject and message in the visitor's language), `tel:` and `https://wa.me/…` links for you. The prefilled texts are `i18n.<lang>.contact.emailSubject`, `emailBody` and `whatsappText`.
+
+### Company details and the legal page (placeholders now)
+
+Slovenian law requires a business website to show who runs it. The page is `/pravno/` (SL) and `/en/legal/` (EN), linked from every footer. Fill in `company`:
+
+```json
+"company": {
+  "name": "Ime Priimek s.p.",
+  "address": "Ulica 1, 1000 Ljubljana",
+  "registrationNumber": "1234567000",
+  "taxNumber": "12345678",
+  "vatId": "",
+  "responsiblePerson": "Matej Doljak",
+  "legalUpdated": "2026-09-26",
+  "legalReviewed": false
+}
+```
+
+`vatId`: your VAT ID (e.g. `SI12345678`), or `""` if you are not registered for VAT (the page then says so). The privacy text is in `i18n.<lang>.legal.privacy`. It describes what the site actually does: no cookies, no tracking, no forms, hosting at Cloudflare, contact by e-mail, phone or WhatsApp. Read it (have it checked if you like), then set `legalReviewed` to `true` and `legalUpdated` to that day; the "Draft" note on the page disappears. If you later add analytics or a form, update the privacy text too.
 
 ### Prices (placeholders now)
 

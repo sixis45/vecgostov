@@ -1,31 +1,8 @@
 // Landing page (one per language).
 import {
   esc, emph, fill, icon, value, isPlaceholder, picture, langSwitch, stamp, postmark,
-  wordmark, contactLinks, money, footer, document,
+  wordmark, contactLinks, money, footer, document, siteHeader,
 } from './lib.mjs';
-
-function header(ctx) {
-  const { t, site } = ctx;
-  return `<a class="skip" href="#main">${esc(t.ui.skip)}</a>
-<header class="hdr" data-header>
-  <div class="wrap hdr__in">
-    <a class="wordmark" href="${ctx.homeUrl}" aria-label="${esc(t.ui.home)}">${wordmark(site.BRAND_NAME)}</a>
-    <nav class="nav" id="nav" aria-label="${esc(t.ui.navLabel)}">
-      <ul class="nav__list" role="list">
-        ${t.nav.map((n) => `<li><a href="#${t.ids[n.key]}">${esc(n.label)}</a></li>`).join('\n        ')}
-      </ul>
-      <div class="nav__extra">
-        ${langSwitch(ctx)}
-        <a class="btn btn--primary" href="#${t.ids.contact}">${esc(t.cta.short)}</a>
-      </div>
-    </nav>
-    <div class="hdr__lang">${langSwitch(ctx)}</div>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" data-menu-button data-label-open="${esc(t.ui.menuOpen)}" data-label-close="${esc(t.ui.menuClose)}">
-      <span class="sr-only" data-menu-label>${esc(t.ui.menuOpen)}</span>${icon('menu')}${icon('close')}
-    </button>
-  </div>
-</header>`;
-}
 
 function hero(ctx) {
   const { t } = ctx;
@@ -355,7 +332,7 @@ function contact(ctx) {
 
 export function renderHome(ctx) {
   const { t } = ctx;
-  const body = `${header(ctx)}
+  const body = `${siteHeader(ctx)}
 <main id="main">
 ${hero(ctx)}
 ${why(ctx)}

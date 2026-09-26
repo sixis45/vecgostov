@@ -12,7 +12,7 @@ import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { renderHome } from '../src/templates/home.mjs';
 import { renderDemo } from '../src/templates/demo.mjs';
-import { renderNotFound, renderStyleTile } from '../src/templates/pages.mjs';
+import { renderNotFound, renderStyleTile, renderLegal } from '../src/templates/pages.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const SRC = path.join(ROOT, 'src');
@@ -126,9 +126,12 @@ async function writePage(urlPath, html) {
   pages.push({ url: urlPath, file: path.relative(DIST, out), bytes: Buffer.byteLength(html) });
 }
 
+const legalOf = (l) => site.i18n[l].paths.legal;
 for (const lang of locales) {
   const alt = Object.fromEntries(locales.map((l) => [l, homeOf(l)]));
   await writePage(homeOf(lang), renderHome(makeCtx(lang, alt)));
+  const altLegal = Object.fromEntries(locales.map((l) => [l, legalOf(l)]));
+  await writePage(legalOf(lang), renderLegal(makeCtx(lang, altLegal)));
   for (const demo of site.demos) {
     const altDemo = Object.fromEntries(locales.map((l) => [l, demoOf(l, demo.slug)]));
     await writePage(demoOf(lang, demo.slug), renderDemo(makeCtx(lang, altDemo), demo));
@@ -168,8 +171,10 @@ const domain = site.site.domain.replace(/\/$/, '');
 await writeFile(path.join(DIST, 'robots.txt'),
   `User-agent: *\nAllow: /\nDisallow: /style-tile/\n${domain ? `\nSitemap: ${domain}/sitemap.xml\n` : ''}`);
 if (domain) {
-  const alts = locales.map((l) => `<xhtml:link rel="alternate" hreflang="${l}" href="${domain}${homeOf(l)}"/>`).join('');
-  const urls = locales.map((l) => `<url><loc>${domain}${homeOf(l)}</loc>${alts}</url>`).join('');
+  const urls = [homeOf, legalOf].map((of) => {
+    const alts = locales.map((l) => `<xhtml:link rel="alternate" hreflang="${l}" href="${domain}${of(l)}"/>`).join('');
+    return locales.map((l) => `<url><loc>${domain}${of(l)}</loc>${alts}</url>`).join('');
+  }).join('');
   await writeFile(path.join(DIST, 'sitemap.xml'),
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${urls}</urlset>\n`);
 }
@@ -182,6 +187,7 @@ const illustrated = Object.entries(site.images).filter(([k, v]) => !k.startsWith
 const todo = [
   report.placeholders.size && `Placeholders to replace in content/site.json: ${[...report.placeholders].join(', ')}`,
   report.drafts.size && `FAQ answers still marked "confirm" (shown with a Draft tag): ${site.i18n[defaultLocale].faq.items.filter((i) => i.confirm).length} per language`,
+  report.legalDraft && 'Legal page text is marked as a draft — check it, then set company.legalReviewed to true.',
   illustrated.length && `Illustrated stand-ins (swap for photos when you have them): ${illustrated.join(', ')}`,
   !domain && 'site.domain is empty — canonical, hreflang, og:url and sitemap.xml are off until you set it.',
 ].filter(Boolean);

@@ -4,6 +4,7 @@ Website for **Več gostov**: modern websites, Google Maps presence and direct in
 
 - Slovenian at `/`, English at `/en/`
 - Three demo apartment sites (fictional properties) at `/primeri/…` and `/en/examples/…`
+- Legal notice & privacy at `/pravno/` and `/en/legal/`
 - Style tile at `/style-tile/`
 - Static site, no framework. Hosted on Cloudflare Pages, deployed from `main`.
 
@@ -33,6 +34,7 @@ Quick version:
 - **Contact:** `contact.email`, `contact.phone`, `contact.whatsapp`
 - **Prices:** `prices.start`, `prices.plus`, `prices.complete`, `prices.care`
 - **Copy:** `i18n.sl.*` (Slovenian) and `i18n.en.*` (English), one block per language
+- **Company details (legal page):** `company.*`
 - **Brand name:** `BRAND_NAME`
 
 Until a placeholder (`€XXX`, `example.com`, `00 000 000`) is replaced, the page shows it with a dashed outline and a "Začasno / Placeholder" tag, and every build lists what is still missing. A contact detail that is still a placeholder is shown as plain text, not a link, and the package buttons scroll to the contact section instead of opening e-mail; real `mailto:`, `tel:` and WhatsApp links appear as soon as the real value is in.

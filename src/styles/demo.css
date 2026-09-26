@@ -190,6 +190,8 @@
 @media (min-width: 62em) { .d-ftr__in { grid-template-columns: 1fr auto; } }
 .d-ftr__title { font-family: var(--font-display); font-size: var(--step-3); line-height: 1.15; }
 .d-ftr__note { margin-top: var(--space-2xs); color: #cfc6bb; font-size: var(--step--1); }
+.d-ftr__note a { display: inline-flex; align-items: center; min-height: var(--tap); color: #f3efe6; }
+.d-ftr__note a:hover { color: #fff; }
 .d-ftr__actions { display: grid; gap: var(--space-s); justify-items: start; }
 .d-ftr__brand { display: inline-flex; align-items: center; gap: 0.35rem; min-height: var(--tap); color: #f3efe6; }
 .d-ftr__brand:hover { color: #fff; }
